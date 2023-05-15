@@ -1,0 +1,4462 @@
+[
+    {
+        "name": {
+            "common": "Spain",
+            "official": "Kingdom of Spain",
+            "nativeName": {
+                "spa": {
+                    "official": "Reino de España",
+                    "common": "España"
+                }
+            }
+        },
+        "cca2": "ES",
+        "ccn3": "724",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Afghanistan",
+            "official": "Islamic Republic of Afghanistan",
+            "nativeName": {
+                "prs": {
+                    "official": "جمهوری اسلامی افغانستان",
+                    "common": "افغانستان"
+                },
+                "pus": {
+                    "official": "د افغانستان اسلامي جمهوریت",
+                    "common": "افغانستان"
+                },
+                "tuk": {
+                    "official": "Owganystan Yslam Respublikasy",
+                    "common": "Owganystan"
+                }
+            }
+        },
+        "cca2": "AF",
+        "ccn3": "004",
+        "currencies": {
+            "AFN": {
+                "name": "Afghan afghani",
+                "symbol": "؋"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Sudan",
+            "official": "Republic of the Sudan",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية السودان",
+                    "common": "السودان"
+                },
+                "eng": {
+                    "official": "Republic of the Sudan",
+                    "common": "Sudan"
+                }
+            }
+        },
+        "cca2": "SD",
+        "ccn3": "729",
+        "currencies": {
+            "SDG": {
+                "name": "Sudanese pound",
+                "symbol": ""
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bulgaria",
+            "official": "Republic of Bulgaria",
+            "nativeName": {
+                "bul": {
+                    "official": "Република България",
+                    "common": "България"
+                }
+            }
+        },
+        "cca2": "BG",
+        "ccn3": "100",
+        "currencies": {
+            "BGN": {
+                "name": "Bulgarian lev",
+                "symbol": "лв"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Germany",
+            "official": "Federal Republic of Germany",
+            "nativeName": {
+                "deu": {
+                    "official": "Bundesrepublik Deutschland",
+                    "common": "Deutschland"
+                }
+            }
+        },
+        "cca2": "DE",
+        "ccn3": "276",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Lithuania",
+            "official": "Republic of Lithuania",
+            "nativeName": {
+                "lit": {
+                    "official": "Lietuvos Respublikos",
+                    "common": "Lietuva"
+                }
+            }
+        },
+        "cca2": "LT",
+        "ccn3": "440",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Marshall Islands",
+            "official": "Republic of the Marshall Islands",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of the Marshall Islands",
+                    "common": "Marshall Islands"
+                },
+                "mah": {
+                    "official": "Republic of the Marshall Islands",
+                    "common": "M̧ajeļ"
+                }
+            }
+        },
+        "cca2": "MH",
+        "ccn3": "584",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Poland",
+            "official": "Republic of Poland",
+            "nativeName": {
+                "pol": {
+                    "official": "Rzeczpospolita Polska",
+                    "common": "Polska"
+                }
+            }
+        },
+        "cca2": "PL",
+        "ccn3": "616",
+        "currencies": {
+            "PLN": {
+                "name": "Polish złoty",
+                "symbol": "zł"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Tanzania",
+            "official": "United Republic of Tanzania",
+            "nativeName": {
+                "eng": {
+                    "official": "United Republic of Tanzania",
+                    "common": "Tanzania"
+                },
+                "swa": {
+                    "official": "Jamhuri ya Muungano wa Tanzania",
+                    "common": "Tanzania"
+                }
+            }
+        },
+        "cca2": "TZ",
+        "ccn3": "834",
+        "currencies": {
+            "TZS": {
+                "name": "Tanzanian shilling",
+                "symbol": "Sh"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Timor-Leste",
+            "official": "Democratic Republic of Timor-Leste",
+            "nativeName": {
+                "por": {
+                    "official": "República Democrática de Timor-Leste",
+                    "common": "Timor-Leste"
+                },
+                "tet": {
+                    "official": "Repúblika Demokrátika Timór-Leste",
+                    "common": "Timór-Leste"
+                }
+            }
+        },
+        "cca2": "TL",
+        "ccn3": "626",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Togo",
+            "official": "Togolese Republic",
+            "nativeName": {
+                "fra": {
+                    "official": "République togolaise",
+                    "common": "Togo"
+                }
+            }
+        },
+        "cca2": "TG",
+        "ccn3": "768",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Czechia",
+            "official": "Czech Republic",
+            "nativeName": {
+                "ces": {
+                    "official": "Česká republika",
+                    "common": "Česko"
+                },
+                "slk": {
+                    "official": "Česká republika",
+                    "common": "Česko"
+                }
+            }
+        },
+        "cca2": "CZ",
+        "ccn3": "203",
+        "currencies": {
+            "CZK": {
+                "name": "Czech koruna",
+                "symbol": "Kč"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Monaco",
+            "official": "Principality of Monaco",
+            "nativeName": {
+                "fra": {
+                    "official": "Principauté de Monaco",
+                    "common": "Monaco"
+                }
+            }
+        },
+        "cca2": "MC",
+        "ccn3": "492",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Uganda",
+            "official": "Republic of Uganda",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Uganda",
+                    "common": "Uganda"
+                },
+                "swa": {
+                    "official": "Republic of Uganda",
+                    "common": "Uganda"
+                }
+            }
+        },
+        "cca2": "UG",
+        "ccn3": "800",
+        "currencies": {
+            "UGX": {
+                "name": "Ugandan shilling",
+                "symbol": "Sh"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Trinidad and Tobago",
+            "official": "Republic of Trinidad and Tobago",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Trinidad and Tobago",
+                    "common": "Trinidad and Tobago"
+                }
+            }
+        },
+        "cca2": "TT",
+        "ccn3": "780",
+        "currencies": {
+            "TTD": {
+                "name": "Trinidad and Tobago dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Algeria",
+            "official": "People's Democratic Republic of Algeria",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية الديمقراطية الشعبية الجزائرية",
+                    "common": "الجزائر"
+                }
+            }
+        },
+        "cca2": "DZ",
+        "ccn3": "012",
+        "currencies": {
+            "DZD": {
+                "name": "Algerian dinar",
+                "symbol": "د.ج"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ukraine",
+            "official": "Ukraine",
+            "nativeName": {
+                "ukr": {
+                    "official": "Україна",
+                    "common": "Україна"
+                }
+            }
+        },
+        "cca2": "UA",
+        "ccn3": "804",
+        "currencies": {
+            "UAH": {
+                "name": "Ukrainian hryvnia",
+                "symbol": "₴"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Estonia",
+            "official": "Republic of Estonia",
+            "nativeName": {
+                "est": {
+                    "official": "Eesti Vabariik",
+                    "common": "Eesti"
+                }
+            }
+        },
+        "cca2": "EE",
+        "ccn3": "233",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Greece",
+            "official": "Hellenic Republic",
+            "nativeName": {
+                "ell": {
+                    "official": "Ελληνική Δημοκρατία",
+                    "common": "Ελλάδα"
+                }
+            }
+        },
+        "cca2": "GR",
+        "ccn3": "300",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mauritania",
+            "official": "Islamic Republic of Mauritania",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية الإسلامية الموريتانية",
+                    "common": "موريتانيا"
+                }
+            }
+        },
+        "cca2": "MR",
+        "ccn3": "478",
+        "currencies": {
+            "MRU": {
+                "name": "Mauritanian ouguiya",
+                "symbol": "UM"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Georgia",
+            "official": "Georgia",
+            "nativeName": {
+                "kat": {
+                    "official": "საქართველო",
+                    "common": "საქართველო"
+                }
+            }
+        },
+        "cca2": "GE",
+        "ccn3": "268",
+        "currencies": {
+            "GEL": {
+                "name": "lari",
+                "symbol": "₾"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Namibia",
+            "official": "Republic of Namibia",
+            "nativeName": {
+                "afr": {
+                    "official": "Republiek van Namibië",
+                    "common": "Namibië"
+                },
+                "deu": {
+                    "official": "Republik Namibia",
+                    "common": "Namibia"
+                },
+                "eng": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "her": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "hgm": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "kwn": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "loz": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "ndo": {
+                    "official": "Republic of Namibia",
+                    "common": "Namibia"
+                },
+                "tsn": {
+                    "official": "Lefatshe la Namibia",
+                    "common": "Namibia"
+                }
+            }
+        },
+        "cca2": "NA",
+        "ccn3": "516",
+        "currencies": {
+            "NAD": {
+                "name": "Namibian dollar",
+                "symbol": "$"
+            },
+            "ZAR": {
+                "name": "South African rand",
+                "symbol": "R"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "North Macedonia",
+            "official": "Republic of North Macedonia",
+            "nativeName": {
+                "mkd": {
+                    "official": "Република Северна Македонија",
+                    "common": "Македонија"
+                }
+            }
+        },
+        "cca2": "MK",
+        "ccn3": "807",
+        "currencies": {
+            "MKD": {
+                "name": "denar",
+                "symbol": "den"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mauritius",
+            "official": "Republic of Mauritius",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Mauritius",
+                    "common": "Mauritius"
+                },
+                "fra": {
+                    "official": "République de Maurice",
+                    "common": "Maurice"
+                },
+                "mfe": {
+                    "official": "Republik Moris",
+                    "common": "Moris"
+                }
+            }
+        },
+        "cca2": "MU",
+        "ccn3": "480",
+        "currencies": {
+            "MUR": {
+                "name": "Mauritian rupee",
+                "symbol": "₨"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Kiribati",
+            "official": "Independent and Sovereign Republic of Kiribati",
+            "nativeName": {
+                "eng": {
+                    "official": "Independent and Sovereign Republic of Kiribati",
+                    "common": "Kiribati"
+                },
+                "gil": {
+                    "official": "Ribaberiki Kiribati",
+                    "common": "Kiribati"
+                }
+            }
+        },
+        "cca2": "KI",
+        "ccn3": "296",
+        "currencies": {
+            "AUD": {
+                "name": "Australian dollar",
+                "symbol": "$"
+            },
+            "KID": {
+                "name": "Kiribati dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Republic of the Congo",
+            "official": "Republic of the Congo",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Congo",
+                    "common": "République du Congo"
+                },
+                "kon": {
+                    "official": "Repubilika ya Kongo",
+                    "common": "Repubilika ya Kongo"
+                },
+                "lin": {
+                    "official": "Republíki ya Kongó",
+                    "common": "Republíki ya Kongó"
+                }
+            }
+        },
+        "cca2": "CG",
+        "ccn3": "178",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Equatorial Guinea",
+            "official": "Republic of Equatorial Guinea",
+            "nativeName": {
+                "fra": {
+                    "official": "République de la Guinée Équatoriale",
+                    "common": "Guinée équatoriale"
+                },
+                "por": {
+                    "official": "República da Guiné Equatorial",
+                    "common": "Guiné Equatorial"
+                },
+                "spa": {
+                    "official": "República de Guinea Ecuatorial",
+                    "common": "Guinea Ecuatorial"
+                }
+            }
+        },
+        "cca2": "GQ",
+        "ccn3": "226",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Palau",
+            "official": "Republic of Palau",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Palau",
+                    "common": "Palau"
+                },
+                "pau": {
+                    "official": "Beluu er a Belau",
+                    "common": "Belau"
+                }
+            }
+        },
+        "cca2": "PW",
+        "ccn3": "585",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Qatar",
+            "official": "State of Qatar",
+            "nativeName": {
+                "ara": {
+                    "official": "دولة قطر",
+                    "common": "قطر"
+                }
+            }
+        },
+        "cca2": "QA",
+        "ccn3": "634",
+        "currencies": {
+            "QAR": {
+                "name": "Qatari riyal",
+                "symbol": "ر.ق"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "United States",
+            "official": "United States of America",
+            "nativeName": {
+                "eng": {
+                    "official": "United States of America",
+                    "common": "United States"
+                }
+            }
+        },
+        "cca2": "US",
+        "ccn3": "840",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Botswana",
+            "official": "Republic of Botswana",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Botswana",
+                    "common": "Botswana"
+                },
+                "tsn": {
+                    "official": "Lefatshe la Botswana",
+                    "common": "Botswana"
+                }
+            }
+        },
+        "cca2": "BW",
+        "ccn3": "072",
+        "currencies": {
+            "BWP": {
+                "name": "Botswana pula",
+                "symbol": "P"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "South Africa",
+            "official": "Republic of South Africa",
+            "nativeName": {
+                "afr": {
+                    "official": "Republiek van Suid-Afrika",
+                    "common": "South Africa"
+                },
+                "eng": {
+                    "official": "Republic of South Africa",
+                    "common": "South Africa"
+                },
+                "nbl": {
+                    "official": "IRiphabliki yeSewula Afrika",
+                    "common": "Sewula Afrika"
+                },
+                "nso": {
+                    "official": "Rephaboliki ya Afrika-Borwa ",
+                    "common": "Afrika-Borwa"
+                },
+                "sot": {
+                    "official": "Rephaboliki ya Afrika Borwa",
+                    "common": "Afrika Borwa"
+                },
+                "ssw": {
+                    "official": "IRiphabhulikhi yeNingizimu Afrika",
+                    "common": "Ningizimu Afrika"
+                },
+                "tsn": {
+                    "official": "Rephaboliki ya Aforika Borwa",
+                    "common": "Aforika Borwa"
+                },
+                "tso": {
+                    "official": "Riphabliki ra Afrika Dzonga",
+                    "common": "Afrika Dzonga"
+                },
+                "ven": {
+                    "official": "Riphabuḽiki ya Afurika Tshipembe",
+                    "common": "Afurika Tshipembe"
+                },
+                "xho": {
+                    "official": "IRiphabliki yaseMzantsi Afrika",
+                    "common": "Mzantsi Afrika"
+                },
+                "zul": {
+                    "official": "IRiphabliki yaseNingizimu Afrika",
+                    "common": "Ningizimu Afrika"
+                }
+            }
+        },
+        "cca2": "ZA",
+        "ccn3": "710",
+        "currencies": {
+            "ZAR": {
+                "name": "South African rand",
+                "symbol": "R"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Vietnam",
+            "official": "Socialist Republic of Vietnam",
+            "nativeName": {
+                "vie": {
+                    "official": "Cộng hòa xã hội chủ nghĩa Việt Nam",
+                    "common": "Việt Nam"
+                }
+            }
+        },
+        "cca2": "VN",
+        "ccn3": "704",
+        "currencies": {
+            "VND": {
+                "name": "Vietnamese đồng",
+                "symbol": "₫"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Guyana",
+            "official": "Co-operative Republic of Guyana",
+            "nativeName": {
+                "eng": {
+                    "official": "Co-operative Republic of Guyana",
+                    "common": "Guyana"
+                }
+            }
+        },
+        "cca2": "GY",
+        "ccn3": "328",
+        "currencies": {
+            "GYD": {
+                "name": "Guyanese dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Tuvalu",
+            "official": "Tuvalu",
+            "nativeName": {
+                "eng": {
+                    "official": "Tuvalu",
+                    "common": "Tuvalu"
+                },
+                "tvl": {
+                    "official": "Tuvalu",
+                    "common": "Tuvalu"
+                }
+            }
+        },
+        "cca2": "TV",
+        "ccn3": "798",
+        "currencies": {
+            "AUD": {
+                "name": "Australian dollar",
+                "symbol": "$"
+            },
+            "TVD": {
+                "name": "Tuvaluan dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Jordan",
+            "official": "Hashemite Kingdom of Jordan",
+            "nativeName": {
+                "ara": {
+                    "official": "المملكة الأردنية الهاشمية",
+                    "common": "الأردن"
+                }
+            }
+        },
+        "cca2": "JO",
+        "ccn3": "400",
+        "currencies": {
+            "JOD": {
+                "name": "Jordanian dinar",
+                "symbol": "د.ا"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Papua New Guinea",
+            "official": "Independent State of Papua New Guinea",
+            "nativeName": {
+                "eng": {
+                    "official": "Independent State of Papua New Guinea",
+                    "common": "Papua New Guinea"
+                },
+                "hmo": {
+                    "official": "Independen Stet bilong Papua Niugini",
+                    "common": "Papua Niu Gini"
+                },
+                "tpi": {
+                    "official": "Independen Stet bilong Papua Niugini",
+                    "common": "Papua Niugini"
+                }
+            }
+        },
+        "cca2": "PG",
+        "ccn3": "598",
+        "currencies": {
+            "PGK": {
+                "name": "Papua New Guinean kina",
+                "symbol": "K"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bahamas",
+            "official": "Commonwealth of the Bahamas",
+            "nativeName": {
+                "eng": {
+                    "official": "Commonwealth of the Bahamas",
+                    "common": "Bahamas"
+                }
+            }
+        },
+        "cca2": "BS",
+        "ccn3": "044",
+        "currencies": {
+            "BSD": {
+                "name": "Bahamian dollar",
+                "symbol": "$"
+            },
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Cape Verde",
+            "official": "Republic of Cabo Verde",
+            "nativeName": {
+                "por": {
+                    "official": "República de Cabo Verde",
+                    "common": "Cabo Verde"
+                }
+            }
+        },
+        "cca2": "CV",
+        "ccn3": "132",
+        "currencies": {
+            "CVE": {
+                "name": "Cape Verdean escudo",
+                "symbol": "Esc"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Oman",
+            "official": "Sultanate of Oman",
+            "nativeName": {
+                "ara": {
+                    "official": "سلطنة عمان",
+                    "common": "عمان"
+                }
+            }
+        },
+        "cca2": "OM",
+        "ccn3": "512",
+        "currencies": {
+            "OMR": {
+                "name": "Omani rial",
+                "symbol": "ر.ع."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Venezuela",
+            "official": "Bolivarian Republic of Venezuela",
+            "nativeName": {
+                "spa": {
+                    "official": "República Bolivariana de Venezuela",
+                    "common": "Venezuela"
+                }
+            }
+        },
+        "cca2": "VE",
+        "ccn3": "862",
+        "currencies": {
+            "VES": {
+                "name": "Venezuelan bolívar soberano",
+                "symbol": "Bs.S."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bolivia",
+            "official": "Plurinational State of Bolivia",
+            "nativeName": {
+                "aym": {
+                    "official": "Wuliwya Suyu",
+                    "common": "Wuliwya"
+                },
+                "grn": {
+                    "official": "Tetã Volívia",
+                    "common": "Volívia"
+                },
+                "que": {
+                    "official": "Buliwya Mamallaqta",
+                    "common": "Buliwya"
+                },
+                "spa": {
+                    "official": "Estado Plurinacional de Bolivia",
+                    "common": "Bolivia"
+                }
+            }
+        },
+        "cca2": "BO",
+        "ccn3": "068",
+        "currencies": {
+            "BOB": {
+                "name": "Bolivian boliviano",
+                "symbol": "Bs."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Egypt",
+            "official": "Arab Republic of Egypt",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية مصر العربية",
+                    "common": "مصر"
+                }
+            }
+        },
+        "cca2": "EG",
+        "ccn3": "818",
+        "currencies": {
+            "EGP": {
+                "name": "Egyptian pound",
+                "symbol": "£"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Canada",
+            "official": "Canada",
+            "nativeName": {
+                "eng": {
+                    "official": "Canada",
+                    "common": "Canada"
+                },
+                "fra": {
+                    "official": "Canada",
+                    "common": "Canada"
+                }
+            }
+        },
+        "cca2": "CA",
+        "ccn3": "124",
+        "currencies": {
+            "CAD": {
+                "name": "Canadian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Norway",
+            "official": "Kingdom of Norway",
+            "nativeName": {
+                "nno": {
+                    "official": "Kongeriket Noreg",
+                    "common": "Noreg"
+                },
+                "nob": {
+                    "official": "Kongeriket Norge",
+                    "common": "Norge"
+                },
+                "smi": {
+                    "official": "Norgga gonagasriika",
+                    "common": "Norgga"
+                }
+            }
+        },
+        "cca2": "NO",
+        "ccn3": "578",
+        "currencies": {
+            "NOK": {
+                "name": "Norwegian krone",
+                "symbol": "kr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Kyrgyzstan",
+            "official": "Kyrgyz Republic",
+            "nativeName": {
+                "kir": {
+                    "official": "Кыргыз Республикасы",
+                    "common": "Кыргызстан"
+                },
+                "rus": {
+                    "official": "Кыргызская Республика",
+                    "common": "Киргизия"
+                }
+            }
+        },
+        "cca2": "KG",
+        "ccn3": "417",
+        "currencies": {
+            "KGS": {
+                "name": "Kyrgyzstani som",
+                "symbol": "с"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Armenia",
+            "official": "Republic of Armenia",
+            "nativeName": {
+                "hye": {
+                    "official": "Հայաստանի Հանրապետություն",
+                    "common": "Հայաստան"
+                }
+            }
+        },
+        "cca2": "AM",
+        "ccn3": "051",
+        "currencies": {
+            "AMD": {
+                "name": "Armenian dram",
+                "symbol": "֏"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "DR Congo",
+            "official": "Democratic Republic of the Congo",
+            "nativeName": {
+                "fra": {
+                    "official": "République démocratique du Congo",
+                    "common": "RD Congo"
+                },
+                "kon": {
+                    "official": "Repubilika ya Kongo Demokratiki",
+                    "common": "Repubilika ya Kongo Demokratiki"
+                },
+                "lin": {
+                    "official": "Republiki ya Kongó Demokratiki",
+                    "common": "Republiki ya Kongó Demokratiki"
+                },
+                "lua": {
+                    "official": "Ditunga dia Kongu wa Mungalaata",
+                    "common": "Ditunga dia Kongu wa Mungalaata"
+                },
+                "swa": {
+                    "official": "Jamhuri ya Kidemokrasia ya Kongo",
+                    "common": "Jamhuri ya Kidemokrasia ya Kongo"
+                }
+            }
+        },
+        "cca2": "CD",
+        "ccn3": "180",
+        "currencies": {
+            "CDF": {
+                "name": "Congolese franc",
+                "symbol": "FC"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Liechtenstein",
+            "official": "Principality of Liechtenstein",
+            "nativeName": {
+                "deu": {
+                    "official": "Fürstentum Liechtenstein",
+                    "common": "Liechtenstein"
+                }
+            }
+        },
+        "cca2": "LI",
+        "ccn3": "438",
+        "currencies": {
+            "CHF": {
+                "name": "Swiss franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Eswatini",
+            "official": "Kingdom of Eswatini",
+            "nativeName": {
+                "eng": {
+                    "official": "Kingdom of Eswatini",
+                    "common": "Eswatini"
+                },
+                "ssw": {
+                    "official": "Umbuso weSwatini",
+                    "common": "eSwatini"
+                }
+            }
+        },
+        "cca2": "SZ",
+        "ccn3": "748",
+        "currencies": {
+            "SZL": {
+                "name": "Swazi lilangeni",
+                "symbol": "L"
+            },
+            "ZAR": {
+                "name": "South African rand",
+                "symbol": "R"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Nigeria",
+            "official": "Federal Republic of Nigeria",
+            "nativeName": {
+                "eng": {
+                    "official": "Federal Republic of Nigeria",
+                    "common": "Nigeria"
+                }
+            }
+        },
+        "cca2": "NG",
+        "ccn3": "566",
+        "currencies": {
+            "NGN": {
+                "name": "Nigerian naira",
+                "symbol": "₦"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Malawi",
+            "official": "Republic of Malawi",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Malawi",
+                    "common": "Malawi"
+                },
+                "nya": {
+                    "official": "Chalo cha Malawi, Dziko la Malaŵi",
+                    "common": "Malaŵi"
+                }
+            }
+        },
+        "cca2": "MW",
+        "ccn3": "454",
+        "currencies": {
+            "MWK": {
+                "name": "Malawian kwacha",
+                "symbol": "MK"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "São Tomé and Príncipe",
+            "official": "Democratic Republic of São Tomé and Príncipe",
+            "nativeName": {
+                "por": {
+                    "official": "República Democrática do São Tomé e Príncipe",
+                    "common": "São Tomé e Príncipe"
+                }
+            }
+        },
+        "cca2": "ST",
+        "ccn3": "678",
+        "currencies": {
+            "STN": {
+                "name": "São Tomé and Príncipe dobra",
+                "symbol": "Db"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Guatemala",
+            "official": "Republic of Guatemala",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Guatemala",
+                    "common": "Guatemala"
+                }
+            }
+        },
+        "cca2": "GT",
+        "ccn3": "320",
+        "currencies": {
+            "GTQ": {
+                "name": "Guatemalan quetzal",
+                "symbol": "Q"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Barbados",
+            "official": "Barbados",
+            "nativeName": {
+                "eng": {
+                    "official": "Barbados",
+                    "common": "Barbados"
+                }
+            }
+        },
+        "cca2": "BB",
+        "ccn3": "052",
+        "currencies": {
+            "BBD": {
+                "name": "Barbadian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ghana",
+            "official": "Republic of Ghana",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Ghana",
+                    "common": "Ghana"
+                }
+            }
+        },
+        "cca2": "GH",
+        "ccn3": "288",
+        "currencies": {
+            "GHS": {
+                "name": "Ghanaian cedi",
+                "symbol": "₵"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Nicaragua",
+            "official": "Republic of Nicaragua",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Nicaragua",
+                    "common": "Nicaragua"
+                }
+            }
+        },
+        "cca2": "NI",
+        "ccn3": "558",
+        "currencies": {
+            "NIO": {
+                "name": "Nicaraguan córdoba",
+                "symbol": "C$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Portugal",
+            "official": "Portuguese Republic",
+            "nativeName": {
+                "por": {
+                    "official": "República português",
+                    "common": "Portugal"
+                }
+            }
+        },
+        "cca2": "PT",
+        "ccn3": "620",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Angola",
+            "official": "Republic of Angola",
+            "nativeName": {
+                "por": {
+                    "official": "República de Angola",
+                    "common": "Angola"
+                }
+            }
+        },
+        "cca2": "AO",
+        "ccn3": "024",
+        "currencies": {
+            "AOA": {
+                "name": "Angolan kwanza",
+                "symbol": "Kz"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Dominican Republic",
+            "official": "Dominican Republic",
+            "nativeName": {
+                "spa": {
+                    "official": "República Dominicana",
+                    "common": "República Dominicana"
+                }
+            }
+        },
+        "cca2": "DO",
+        "ccn3": "214",
+        "currencies": {
+            "DOP": {
+                "name": "Dominican peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Albania",
+            "official": "Republic of Albania",
+            "nativeName": {
+                "sqi": {
+                    "official": "Republika e Shqipërisë",
+                    "common": "Shqipëria"
+                }
+            }
+        },
+        "cca2": "AL",
+        "ccn3": "008",
+        "currencies": {
+            "ALL": {
+                "name": "Albanian lek",
+                "symbol": "L"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Guinea-Bissau",
+            "official": "Republic of Guinea-Bissau",
+            "nativeName": {
+                "por": {
+                    "official": "República da Guiné-Bissau",
+                    "common": "Guiné-Bissau"
+                },
+                "pov": {
+                    "official": "República da Guiné-Bissau",
+                    "common": "Guiné-Bissau"
+                }
+            }
+        },
+        "cca2": "GW",
+        "ccn3": "624",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Libya",
+            "official": "State of Libya",
+            "nativeName": {
+                "ara": {
+                    "official": "الدولة ليبيا",
+                    "common": "‏ليبيا"
+                }
+            }
+        },
+        "cca2": "LY",
+        "ccn3": "434",
+        "currencies": {
+            "LYD": {
+                "name": "Libyan dinar",
+                "symbol": "ل.د"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Kuwait",
+            "official": "State of Kuwait",
+            "nativeName": {
+                "ara": {
+                    "official": "دولة الكويت",
+                    "common": "الكويت"
+                }
+            }
+        },
+        "cca2": "KW",
+        "ccn3": "414",
+        "currencies": {
+            "KWD": {
+                "name": "Kuwaiti dinar",
+                "symbol": "د.ك"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bahrain",
+            "official": "Kingdom of Bahrain",
+            "nativeName": {
+                "ara": {
+                    "official": "مملكة البحرين",
+                    "common": "‏البحرين"
+                }
+            }
+        },
+        "cca2": "BH",
+        "ccn3": "048",
+        "currencies": {
+            "BHD": {
+                "name": "Bahraini dinar",
+                "symbol": ".د.ب"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Turkmenistan",
+            "official": "Turkmenistan",
+            "nativeName": {
+                "rus": {
+                    "official": "Туркменистан",
+                    "common": "Туркмения"
+                },
+                "tuk": {
+                    "official": "Türkmenistan",
+                    "common": "Türkmenistan"
+                }
+            }
+        },
+        "cca2": "TM",
+        "ccn3": "795",
+        "currencies": {
+            "TMT": {
+                "name": "Turkmenistan manat",
+                "symbol": "m"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Liberia",
+            "official": "Republic of Liberia",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Liberia",
+                    "common": "Liberia"
+                }
+            }
+        },
+        "cca2": "LR",
+        "ccn3": "430",
+        "currencies": {
+            "LRD": {
+                "name": "Liberian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Burkina Faso",
+            "official": "Burkina Faso",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Burkina",
+                    "common": "Burkina Faso"
+                }
+            }
+        },
+        "cca2": "BF",
+        "ccn3": "854",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Latvia",
+            "official": "Republic of Latvia",
+            "nativeName": {
+                "lav": {
+                    "official": "Latvijas Republikas",
+                    "common": "Latvija"
+                }
+            }
+        },
+        "cca2": "LV",
+        "ccn3": "428",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Russia",
+            "official": "Russian Federation",
+            "nativeName": {
+                "rus": {
+                    "official": "Российская Федерация",
+                    "common": "Россия"
+                }
+            }
+        },
+        "cca2": "RU",
+        "ccn3": "643",
+        "currencies": {
+            "RUB": {
+                "name": "Russian ruble",
+                "symbol": "₽"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Philippines",
+            "official": "Republic of the Philippines",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of the Philippines",
+                    "common": "Philippines"
+                },
+                "fil": {
+                    "official": "Republic of the Philippines",
+                    "common": "Pilipinas"
+                }
+            }
+        },
+        "cca2": "PH",
+        "ccn3": "608",
+        "currencies": {
+            "PHP": {
+                "name": "Philippine peso",
+                "symbol": "₱"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "New Zealand",
+            "official": "New Zealand",
+            "nativeName": {
+                "eng": {
+                    "official": "New Zealand",
+                    "common": "New Zealand"
+                },
+                "mri": {
+                    "official": "Aotearoa",
+                    "common": "Aotearoa"
+                },
+                "nzs": {
+                    "official": "New Zealand",
+                    "common": "New Zealand"
+                }
+            }
+        },
+        "cca2": "NZ",
+        "ccn3": "554",
+        "currencies": {
+            "NZD": {
+                "name": "New Zealand dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Cameroon",
+            "official": "Republic of Cameroon",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Cameroon",
+                    "common": "Cameroon"
+                },
+                "fra": {
+                    "official": "République du Cameroun",
+                    "common": "Cameroun"
+                }
+            }
+        },
+        "cca2": "CM",
+        "ccn3": "120",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ecuador",
+            "official": "Republic of Ecuador",
+            "nativeName": {
+                "spa": {
+                    "official": "República del Ecuador",
+                    "common": "Ecuador"
+                }
+            }
+        },
+        "cca2": "EC",
+        "ccn3": "218",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Romania",
+            "official": "Romania",
+            "nativeName": {
+                "ron": {
+                    "official": "România",
+                    "common": "România"
+                }
+            }
+        },
+        "cca2": "RO",
+        "ccn3": "642",
+        "currencies": {
+            "RON": {
+                "name": "Romanian leu",
+                "symbol": "lei"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "India",
+            "official": "Republic of India",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of India",
+                    "common": "India"
+                },
+                "hin": {
+                    "official": "भारत गणराज्य",
+                    "common": "भारत"
+                },
+                "tam": {
+                    "official": "இந்தியக் குடியரசு",
+                    "common": "இந்தியா"
+                }
+            }
+        },
+        "cca2": "IN",
+        "ccn3": "356",
+        "currencies": {
+            "INR": {
+                "name": "Indian rupee",
+                "symbol": "₹"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Gabon",
+            "official": "Gabonese Republic",
+            "nativeName": {
+                "fra": {
+                    "official": "République gabonaise",
+                    "common": "Gabon"
+                }
+            }
+        },
+        "cca2": "GA",
+        "ccn3": "266",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Myanmar",
+            "official": "Republic of the Union of Myanmar",
+            "nativeName": {
+                "mya": {
+                    "official": "ပြည်ထောင်စု သမ္မတ မြန်မာနိုင်ငံတော်",
+                    "common": "မြန်မာ"
+                }
+            }
+        },
+        "cca2": "MM",
+        "ccn3": "104",
+        "currencies": {
+            "MMK": {
+                "name": "Burmese kyat",
+                "symbol": "Ks"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Montenegro",
+            "official": "Montenegro",
+            "nativeName": {
+                "cnr": {
+                    "official": "Црна Гора",
+                    "common": "Црна Гора"
+                }
+            }
+        },
+        "cca2": "ME",
+        "ccn3": "499",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Belize",
+            "official": "Belize",
+            "nativeName": {
+                "bjz": {
+                    "official": "Belize",
+                    "common": "Belize"
+                },
+                "eng": {
+                    "official": "Belize",
+                    "common": "Belize"
+                },
+                "spa": {
+                    "official": "Belice",
+                    "common": "Belice"
+                }
+            }
+        },
+        "cca2": "BZ",
+        "ccn3": "084",
+        "currencies": {
+            "BZD": {
+                "name": "Belize dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mongolia",
+            "official": "Mongolia",
+            "nativeName": {
+                "mon": {
+                    "official": "Монгол улс",
+                    "common": "Монгол улс"
+                }
+            }
+        },
+        "cca2": "MN",
+        "ccn3": "496",
+        "currencies": {
+            "MNT": {
+                "name": "Mongolian tögrög",
+                "symbol": "₮"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Austria",
+            "official": "Republic of Austria",
+            "nativeName": {
+                "bar": {
+                    "official": "Republik Österreich",
+                    "common": "Österreich"
+                }
+            }
+        },
+        "cca2": "AT",
+        "ccn3": "040",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Saudi Arabia",
+            "official": "Kingdom of Saudi Arabia",
+            "nativeName": {
+                "ara": {
+                    "official": "المملكة العربية السعودية",
+                    "common": "العربية السعودية"
+                }
+            }
+        },
+        "cca2": "SA",
+        "ccn3": "682",
+        "currencies": {
+            "SAR": {
+                "name": "Saudi riyal",
+                "symbol": "ر.س"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Hungary",
+            "official": "Hungary",
+            "nativeName": {
+                "hun": {
+                    "official": "Magyarország",
+                    "common": "Magyarország"
+                }
+            }
+        },
+        "cca2": "HU",
+        "ccn3": "348",
+        "currencies": {
+            "HUF": {
+                "name": "Hungarian forint",
+                "symbol": "Ft"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Nauru",
+            "official": "Republic of Nauru",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Nauru",
+                    "common": "Nauru"
+                },
+                "nau": {
+                    "official": "Republic of Nauru",
+                    "common": "Nauru"
+                }
+            }
+        },
+        "cca2": "NR",
+        "ccn3": "520",
+        "currencies": {
+            "AUD": {
+                "name": "Australian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Argentina",
+            "official": "Argentine Republic",
+            "nativeName": {
+                "grn": {
+                    "official": "Argentine Republic",
+                    "common": "Argentina"
+                },
+                "spa": {
+                    "official": "República Argentina",
+                    "common": "Argentina"
+                }
+            }
+        },
+        "cca2": "AR",
+        "ccn3": "032",
+        "currencies": {
+            "ARS": {
+                "name": "Argentine peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Yemen",
+            "official": "Republic of Yemen",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية اليمنية",
+                    "common": "اليَمَن"
+                }
+            }
+        },
+        "cca2": "YE",
+        "ccn3": "887",
+        "currencies": {
+            "YER": {
+                "name": "Yemeni rial",
+                "symbol": "﷼"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Slovakia",
+            "official": "Slovak Republic",
+            "nativeName": {
+                "slk": {
+                    "official": "Slovenská republika",
+                    "common": "Slovensko"
+                }
+            }
+        },
+        "cca2": "SK",
+        "ccn3": "703",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Sweden",
+            "official": "Kingdom of Sweden",
+            "nativeName": {
+                "swe": {
+                    "official": "Konungariket Sverige",
+                    "common": "Sverige"
+                }
+            }
+        },
+        "cca2": "SE",
+        "ccn3": "752",
+        "currencies": {
+            "SEK": {
+                "name": "Swedish krona",
+                "symbol": "kr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Italy",
+            "official": "Italian Republic",
+            "nativeName": {
+                "ita": {
+                    "official": "Repubblica italiana",
+                    "common": "Italia"
+                }
+            }
+        },
+        "cca2": "IT",
+        "ccn3": "380",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Brazil",
+            "official": "Federative Republic of Brazil",
+            "nativeName": {
+                "por": {
+                    "official": "República Federativa do Brasil",
+                    "common": "Brasil"
+                }
+            }
+        },
+        "cca2": "BR",
+        "ccn3": "076",
+        "currencies": {
+            "BRL": {
+                "name": "Brazilian real",
+                "symbol": "R$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "South Sudan",
+            "official": "Republic of South Sudan",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of South Sudan",
+                    "common": "South Sudan"
+                }
+            }
+        },
+        "cca2": "SS",
+        "ccn3": "728",
+        "currencies": {
+            "SSP": {
+                "name": "South Sudanese pound",
+                "symbol": "£"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Cyprus",
+            "official": "Republic of Cyprus",
+            "nativeName": {
+                "ell": {
+                    "official": "Δημοκρατία της Κύπρος",
+                    "common": "Κύπρος"
+                },
+                "tur": {
+                    "official": "Kıbrıs Cumhuriyeti",
+                    "common": "Kıbrıs"
+                }
+            }
+        },
+        "cca2": "CY",
+        "ccn3": "196",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Thailand",
+            "official": "Kingdom of Thailand",
+            "nativeName": {
+                "tha": {
+                    "official": "ราชอาณาจักรไทย",
+                    "common": "ประเทศไทย"
+                }
+            }
+        },
+        "cca2": "TH",
+        "ccn3": "764",
+        "currencies": {
+            "THB": {
+                "name": "Thai baht",
+                "symbol": "฿"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Turkey",
+            "official": "Republic of Turkey",
+            "nativeName": {
+                "tur": {
+                    "official": "Türkiye Cumhuriyeti",
+                    "common": "Türkiye"
+                }
+            }
+        },
+        "cca2": "TR",
+        "ccn3": "792",
+        "currencies": {
+            "TRY": {
+                "name": "Turkish lira",
+                "symbol": "₺"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Australia",
+            "official": "Commonwealth of Australia",
+            "nativeName": {
+                "eng": {
+                    "official": "Commonwealth of Australia",
+                    "common": "Australia"
+                }
+            }
+        },
+        "cca2": "AU",
+        "ccn3": "036",
+        "currencies": {
+            "AUD": {
+                "name": "Australian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bangladesh",
+            "official": "People's Republic of Bangladesh",
+            "nativeName": {
+                "ben": {
+                    "official": "বাংলাদেশ গণপ্রজাতন্ত্রী",
+                    "common": "বাংলাদেশ"
+                }
+            }
+        },
+        "cca2": "BD",
+        "ccn3": "050",
+        "currencies": {
+            "BDT": {
+                "name": "Bangladeshi taka",
+                "symbol": "৳"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Grenada",
+            "official": "Grenada",
+            "nativeName": {
+                "eng": {
+                    "official": "Grenada",
+                    "common": "Grenada"
+                }
+            }
+        },
+        "cca2": "GD",
+        "ccn3": "308",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Singapore",
+            "official": "Republic of Singapore",
+            "nativeName": {
+                "zho": {
+                    "official": "新加坡共和国",
+                    "common": "新加坡"
+                },
+                "eng": {
+                    "official": "Republic of Singapore",
+                    "common": "Singapore"
+                },
+                "msa": {
+                    "official": "Republik Singapura",
+                    "common": "Singapura"
+                },
+                "tam": {
+                    "official": "சிங்கப்பூர் குடியரசு",
+                    "common": "சிங்கப்பூர்"
+                }
+            }
+        },
+        "cca2": "SG",
+        "ccn3": "702",
+        "currencies": {
+            "SGD": {
+                "name": "Singapore dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Moldova",
+            "official": "Republic of Moldova",
+            "nativeName": {
+                "ron": {
+                    "official": "Republica Moldova",
+                    "common": "Moldova"
+                }
+            }
+        },
+        "cca2": "MD",
+        "ccn3": "498",
+        "currencies": {
+            "MDL": {
+                "name": "Moldovan leu",
+                "symbol": "L"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mali",
+            "official": "Republic of Mali",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Mali",
+                    "common": "Mali"
+                }
+            }
+        },
+        "cca2": "ML",
+        "ccn3": "466",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Kenya",
+            "official": "Republic of Kenya",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Kenya",
+                    "common": "Kenya"
+                },
+                "swa": {
+                    "official": "Republic of Kenya",
+                    "common": "Kenya"
+                }
+            }
+        },
+        "cca2": "KE",
+        "ccn3": "404",
+        "currencies": {
+            "KES": {
+                "name": "Kenyan shilling",
+                "symbol": "Sh"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Uruguay",
+            "official": "Oriental Republic of Uruguay",
+            "nativeName": {
+                "spa": {
+                    "official": "República Oriental del Uruguay",
+                    "common": "Uruguay"
+                }
+            }
+        },
+        "cca2": "UY",
+        "ccn3": "858",
+        "currencies": {
+            "UYU": {
+                "name": "Uruguayan peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Switzerland",
+            "official": "Swiss Confederation",
+            "nativeName": {
+                "fra": {
+                    "official": "Confédération suisse",
+                    "common": "Suisse"
+                },
+                "gsw": {
+                    "official": "Schweizerische Eidgenossenschaft",
+                    "common": "Schweiz"
+                },
+                "ita": {
+                    "official": "Confederazione Svizzera",
+                    "common": "Svizzera"
+                },
+                "roh": {
+                    "official": "Confederaziun svizra",
+                    "common": "Svizra"
+                }
+            }
+        },
+        "cca2": "CH",
+        "ccn3": "756",
+        "currencies": {
+            "CHF": {
+                "name": "Swiss franc",
+                "symbol": "Fr."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "El Salvador",
+            "official": "Republic of El Salvador",
+            "nativeName": {
+                "spa": {
+                    "official": "República de El Salvador",
+                    "common": "El Salvador"
+                }
+            }
+        },
+        "cca2": "SV",
+        "ccn3": "222",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Chad",
+            "official": "Republic of Chad",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية تشاد",
+                    "common": "تشاد‎"
+                },
+                "fra": {
+                    "official": "République du Tchad",
+                    "common": "Tchad"
+                }
+            }
+        },
+        "cca2": "TD",
+        "ccn3": "148",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Belarus",
+            "official": "Republic of Belarus",
+            "nativeName": {
+                "bel": {
+                    "official": "Рэспубліка Беларусь",
+                    "common": "Белару́сь"
+                },
+                "rus": {
+                    "official": "Республика Беларусь",
+                    "common": "Беларусь"
+                }
+            }
+        },
+        "cca2": "BY",
+        "ccn3": "112",
+        "currencies": {
+            "BYN": {
+                "name": "Belarusian ruble",
+                "symbol": "Br"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ivory Coast",
+            "official": "Republic of Côte d'Ivoire",
+            "nativeName": {
+                "fra": {
+                    "official": "République de Côte d'Ivoire",
+                    "common": "Côte d'Ivoire"
+                }
+            }
+        },
+        "cca2": "CI",
+        "ccn3": "384",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Lebanon",
+            "official": "Lebanese Republic",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية اللبنانية",
+                    "common": "لبنان"
+                },
+                "fra": {
+                    "official": "République libanaise",
+                    "common": "Liban"
+                }
+            }
+        },
+        "cca2": "LB",
+        "ccn3": "422",
+        "currencies": {
+            "LBP": {
+                "name": "Lebanese pound",
+                "symbol": "ل.ل"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Netherlands",
+            "official": "Kingdom of the Netherlands",
+            "nativeName": {
+                "nld": {
+                    "official": "Koninkrijk der Nederlanden",
+                    "common": "Nederland"
+                }
+            }
+        },
+        "cca2": "NL",
+        "ccn3": "528",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "San Marino",
+            "official": "Republic of San Marino",
+            "nativeName": {
+                "ita": {
+                    "official": "Repubblica di San Marino",
+                    "common": "San Marino"
+                }
+            }
+        },
+        "cca2": "SM",
+        "ccn3": "674",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bhutan",
+            "official": "Kingdom of Bhutan",
+            "nativeName": {
+                "dzo": {
+                    "official": "འབྲུག་རྒྱལ་ཁབ་",
+                    "common": "འབྲུག་ཡུལ་"
+                }
+            }
+        },
+        "cca2": "BT",
+        "ccn3": "064",
+        "currencies": {
+            "BTN": {
+                "name": "Bhutanese ngultrum",
+                "symbol": "Nu."
+            },
+            "INR": {
+                "name": "Indian rupee",
+                "symbol": "₹"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Malaysia",
+            "official": "Malaysia",
+            "nativeName": {
+                "eng": {
+                    "official": "Malaysia",
+                    "common": "Malaysia"
+                },
+                "msa": {
+                    "official": "مليسيا",
+                    "common": "مليسيا"
+                }
+            }
+        },
+        "cca2": "MY",
+        "ccn3": "458",
+        "currencies": {
+            "MYR": {
+                "name": "Malaysian ringgit",
+                "symbol": "RM"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Kazakhstan",
+            "official": "Republic of Kazakhstan",
+            "nativeName": {
+                "kaz": {
+                    "official": "Қазақстан Республикасы",
+                    "common": "Қазақстан"
+                },
+                "rus": {
+                    "official": "Республика Казахстан",
+                    "common": "Казахстан"
+                }
+            }
+        },
+        "cca2": "KZ",
+        "ccn3": "398",
+        "currencies": {
+            "KZT": {
+                "name": "Kazakhstani tenge",
+                "symbol": "₸"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Finland",
+            "official": "Republic of Finland",
+            "nativeName": {
+                "fin": {
+                    "official": "Suomen tasavalta",
+                    "common": "Suomi"
+                },
+                "swe": {
+                    "official": "Republiken Finland",
+                    "common": "Finland"
+                }
+            }
+        },
+        "cca2": "FI",
+        "ccn3": "246",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Tunisia",
+            "official": "Tunisian Republic",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية التونسية",
+                    "common": "تونس"
+                }
+            }
+        },
+        "cca2": "TN",
+        "ccn3": "788",
+        "currencies": {
+            "TND": {
+                "name": "Tunisian dinar",
+                "symbol": "د.ت"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Gambia",
+            "official": "Republic of the Gambia",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of the Gambia",
+                    "common": "Gambia"
+                }
+            }
+        },
+        "cca2": "GM",
+        "ccn3": "270",
+        "currencies": {
+            "GMD": {
+                "name": "dalasi",
+                "symbol": "D"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Syria",
+            "official": "Syrian Arab Republic",
+            "nativeName": {
+                "ara": {
+                    "official": "الجمهورية العربية السورية",
+                    "common": "سوريا"
+                }
+            }
+        },
+        "cca2": "SY",
+        "ccn3": "760",
+        "currencies": {
+            "SYP": {
+                "name": "Syrian pound",
+                "symbol": "£"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Guinea",
+            "official": "Republic of Guinea",
+            "nativeName": {
+                "fra": {
+                    "official": "République de Guinée",
+                    "common": "Guinée"
+                }
+            }
+        },
+        "cca2": "GN",
+        "ccn3": "324",
+        "currencies": {
+            "GNF": {
+                "name": "Guinean franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mozambique",
+            "official": "Republic of Mozambique",
+            "nativeName": {
+                "por": {
+                    "official": "República de Moçambique",
+                    "common": "Moçambique"
+                }
+            }
+        },
+        "cca2": "MZ",
+        "ccn3": "508",
+        "currencies": {
+            "MZN": {
+                "name": "Mozambican metical",
+                "symbol": "MT"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Samoa",
+            "official": "Independent State of Samoa",
+            "nativeName": {
+                "eng": {
+                    "official": "Independent State of Samoa",
+                    "common": "Samoa"
+                },
+                "smo": {
+                    "official": "Malo Saʻoloto Tutoʻatasi o Sāmoa",
+                    "common": "Sāmoa"
+                }
+            }
+        },
+        "cca2": "WS",
+        "ccn3": "882",
+        "currencies": {
+            "WST": {
+                "name": "Samoan tālā",
+                "symbol": "T"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "North Korea",
+            "official": "Democratic People's Republic of Korea",
+            "nativeName": {
+                "kor": {
+                    "official": "조선민주주의인민공화국",
+                    "common": "조선"
+                }
+            }
+        },
+        "cca2": "KP",
+        "ccn3": "408",
+        "currencies": {
+            "KPW": {
+                "name": "North Korean won",
+                "symbol": "₩"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Djibouti",
+            "official": "Republic of Djibouti",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية جيبوتي",
+                    "common": "جيبوتي‎"
+                },
+                "fra": {
+                    "official": "République de Djibouti",
+                    "common": "Djibouti"
+                }
+            }
+        },
+        "cca2": "DJ",
+        "ccn3": "262",
+        "currencies": {
+            "DJF": {
+                "name": "Djiboutian franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Suriname",
+            "official": "Republic of Suriname",
+            "nativeName": {
+                "nld": {
+                    "official": "Republiek Suriname",
+                    "common": "Suriname"
+                }
+            }
+        },
+        "cca2": "SR",
+        "ccn3": "740",
+        "currencies": {
+            "SRD": {
+                "name": "Surinamese dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "France",
+            "official": "French Republic",
+            "nativeName": {
+                "fra": {
+                    "official": "République française",
+                    "common": "France"
+                }
+            }
+        },
+        "cca2": "FR",
+        "ccn3": "250",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Rwanda",
+            "official": "Republic of Rwanda",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Rwanda",
+                    "common": "Rwanda"
+                },
+                "fra": {
+                    "official": "République rwandaise",
+                    "common": "Rwanda"
+                },
+                "kin": {
+                    "official": "Repubulika y'u Rwanda",
+                    "common": "Rwanda"
+                }
+            }
+        },
+        "cca2": "RW",
+        "ccn3": "646",
+        "currencies": {
+            "RWF": {
+                "name": "Rwandan franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "South Korea",
+            "official": "Republic of Korea",
+            "nativeName": {
+                "kor": {
+                    "official": "대한민국",
+                    "common": "한국"
+                }
+            }
+        },
+        "cca2": "KR",
+        "ccn3": "410",
+        "currencies": {
+            "KRW": {
+                "name": "South Korean won",
+                "symbol": "₩"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Jamaica",
+            "official": "Jamaica",
+            "nativeName": {
+                "eng": {
+                    "official": "Jamaica",
+                    "common": "Jamaica"
+                },
+                "jam": {
+                    "official": "Jamaica",
+                    "common": "Jamaica"
+                }
+            }
+        },
+        "cca2": "JM",
+        "ccn3": "388",
+        "currencies": {
+            "JMD": {
+                "name": "Jamaican dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Maldives",
+            "official": "Republic of the Maldives",
+            "nativeName": {
+                "div": {
+                    "official": "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ",
+                    "common": "ދިވެހިރާއްޖޭގެ"
+                }
+            }
+        },
+        "cca2": "MV",
+        "ccn3": "462",
+        "currencies": {
+            "MVR": {
+                "name": "Maldivian rufiyaa",
+                "symbol": ".ރ"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Slovenia",
+            "official": "Republic of Slovenia",
+            "nativeName": {
+                "slv": {
+                    "official": "Republika Slovenija",
+                    "common": "Slovenija"
+                }
+            }
+        },
+        "cca2": "SI",
+        "ccn3": "705",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Paraguay",
+            "official": "Republic of Paraguay",
+            "nativeName": {
+                "grn": {
+                    "official": "Tetã Paraguái",
+                    "common": "Paraguái"
+                },
+                "spa": {
+                    "official": "República de Paraguay",
+                    "common": "Paraguay"
+                }
+            }
+        },
+        "cca2": "PY",
+        "ccn3": "600",
+        "currencies": {
+            "PYG": {
+                "name": "Paraguayan guaraní",
+                "symbol": "₲"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Indonesia",
+            "official": "Republic of Indonesia",
+            "nativeName": {
+                "ind": {
+                    "official": "Republik Indonesia",
+                    "common": "Indonesia"
+                }
+            }
+        },
+        "cca2": "ID",
+        "ccn3": "360",
+        "currencies": {
+            "IDR": {
+                "name": "Indonesian rupiah",
+                "symbol": "Rp"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Madagascar",
+            "official": "Republic of Madagascar",
+            "nativeName": {
+                "fra": {
+                    "official": "République de Madagascar",
+                    "common": "Madagascar"
+                },
+                "mlg": {
+                    "official": "Repoblikan'i Madagasikara",
+                    "common": "Madagasikara"
+                }
+            }
+        },
+        "cca2": "MG",
+        "ccn3": "450",
+        "currencies": {
+            "MGA": {
+                "name": "Malagasy ariary",
+                "symbol": "Ar"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Iraq",
+            "official": "Republic of Iraq",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية العراق",
+                    "common": "العراق"
+                },
+                "arc": {
+                    "official": "ܩܘܼܛܢܵܐ ܐܝܼܪܲܩ",
+                    "common": "ܩܘܼܛܢܵܐ"
+                },
+                "ckb": {
+                    "official": "کۆماری عێراق",
+                    "common": "کۆماری"
+                }
+            }
+        },
+        "cca2": "IQ",
+        "ccn3": "368",
+        "currencies": {
+            "IQD": {
+                "name": "Iraqi dinar",
+                "symbol": "ع.د"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Honduras",
+            "official": "Republic of Honduras",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Honduras",
+                    "common": "Honduras"
+                }
+            }
+        },
+        "cca2": "HN",
+        "ccn3": "340",
+        "currencies": {
+            "HNL": {
+                "name": "Honduran lempira",
+                "symbol": "L"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Morocco",
+            "official": "Kingdom of Morocco",
+            "nativeName": {
+                "ara": {
+                    "official": "المملكة المغربية",
+                    "common": "المغرب"
+                },
+                "ber": {
+                    "official": "ⵜⴰⴳⵍⴷⵉⵜ ⵏ ⵍⵎⵖⵔⵉⴱ",
+                    "common": "ⵍⵎⴰⵖⵔⵉⴱ"
+                }
+            }
+        },
+        "cca2": "MA",
+        "ccn3": "504",
+        "currencies": {
+            "MAD": {
+                "name": "Moroccan dirham",
+                "symbol": "د.م."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Antigua and Barbuda",
+            "official": "Antigua and Barbuda",
+            "nativeName": {
+                "eng": {
+                    "official": "Antigua and Barbuda",
+                    "common": "Antigua and Barbuda"
+                }
+            }
+        },
+        "cca2": "AG",
+        "ccn3": "028",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Sri Lanka",
+            "official": "Democratic Socialist Republic of Sri Lanka",
+            "nativeName": {
+                "sin": {
+                    "official": "ශ්‍රී ලංකා ප්‍රජාතාන්ත්‍රික සමාජවාදී ජනරජය",
+                    "common": "ශ්‍රී ලංකාව"
+                },
+                "tam": {
+                    "official": "இலங்கை சனநாயக சோசலிசக் குடியரசு",
+                    "common": "இலங்கை"
+                }
+            }
+        },
+        "cca2": "LK",
+        "ccn3": "144",
+        "currencies": {
+            "LKR": {
+                "name": "Sri Lankan rupee",
+                "symbol": "Rs  රු"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Haiti",
+            "official": "Republic of Haiti",
+            "nativeName": {
+                "fra": {
+                    "official": "République d'Haïti",
+                    "common": "Haïti"
+                },
+                "hat": {
+                    "official": "Repiblik Ayiti",
+                    "common": "Ayiti"
+                }
+            }
+        },
+        "cca2": "HT",
+        "ccn3": "332",
+        "currencies": {
+            "HTG": {
+                "name": "Haitian gourde",
+                "symbol": "G"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Cuba",
+            "official": "Republic of Cuba",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Cuba",
+                    "common": "Cuba"
+                }
+            }
+        },
+        "cca2": "CU",
+        "ccn3": "192",
+        "currencies": {
+            "CUC": {
+                "name": "Cuban convertible peso",
+                "symbol": "$"
+            },
+            "CUP": {
+                "name": "Cuban peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Tajikistan",
+            "official": "Republic of Tajikistan",
+            "nativeName": {
+                "rus": {
+                    "official": "Республика Таджикистан",
+                    "common": "Таджикистан"
+                },
+                "tgk": {
+                    "official": "Ҷумҳурии Тоҷикистон",
+                    "common": "Тоҷикистон"
+                }
+            }
+        },
+        "cca2": "TJ",
+        "ccn3": "762",
+        "currencies": {
+            "TJS": {
+                "name": "Tajikistani somoni",
+                "symbol": "ЅМ"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Colombia",
+            "official": "Republic of Colombia",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Colombia",
+                    "common": "Colombia"
+                }
+            }
+        },
+        "cca2": "CO",
+        "ccn3": "170",
+        "currencies": {
+            "COP": {
+                "name": "Colombian peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Micronesia",
+            "official": "Federated States of Micronesia",
+            "nativeName": {
+                "eng": {
+                    "official": "Federated States of Micronesia",
+                    "common": "Micronesia"
+                }
+            }
+        },
+        "cca2": "FM",
+        "ccn3": "583",
+        "currencies": {
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Saint Kitts and Nevis",
+            "official": "Federation of Saint Christopher and Nevis",
+            "nativeName": {
+                "eng": {
+                    "official": "Federation of Saint Christopher and Nevis",
+                    "common": "Saint Kitts and Nevis"
+                }
+            }
+        },
+        "cca2": "KN",
+        "ccn3": "659",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Uzbekistan",
+            "official": "Republic of Uzbekistan",
+            "nativeName": {
+                "rus": {
+                    "official": "Республика Узбекистан",
+                    "common": "Узбекистан"
+                },
+                "uzb": {
+                    "official": "O'zbekiston Respublikasi",
+                    "common": "O‘zbekiston"
+                }
+            }
+        },
+        "cca2": "UZ",
+        "ccn3": "860",
+        "currencies": {
+            "UZS": {
+                "name": "Uzbekistani soʻm",
+                "symbol": "so'm"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ireland",
+            "official": "Republic of Ireland",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Ireland",
+                    "common": "Ireland"
+                },
+                "gle": {
+                    "official": "Poblacht na hÉireann",
+                    "common": "Éire"
+                }
+            }
+        },
+        "cca2": "IE",
+        "ccn3": "372",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Peru",
+            "official": "Republic of Peru",
+            "nativeName": {
+                "aym": {
+                    "official": "Piruw Suyu",
+                    "common": "Piruw"
+                },
+                "que": {
+                    "official": "Piruw Ripuwlika",
+                    "common": "Piruw"
+                },
+                "spa": {
+                    "official": "República del Perú",
+                    "common": "Perú"
+                }
+            }
+        },
+        "cca2": "PE",
+        "ccn3": "604",
+        "currencies": {
+            "PEN": {
+                "name": "Peruvian sol",
+                "symbol": "S/ "
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Pakistan",
+            "official": "Islamic Republic of Pakistan",
+            "nativeName": {
+                "eng": {
+                    "official": "Islamic Republic of Pakistan",
+                    "common": "Pakistan"
+                },
+                "urd": {
+                    "official": "اسلامی جمہوریۂ پاكستان",
+                    "common": "پاكستان"
+                }
+            }
+        },
+        "cca2": "PK",
+        "ccn3": "586",
+        "currencies": {
+            "PKR": {
+                "name": "Pakistani rupee",
+                "symbol": "₨"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Chile",
+            "official": "Republic of Chile",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Chile",
+                    "common": "Chile"
+                }
+            }
+        },
+        "cca2": "CL",
+        "ccn3": "152",
+        "currencies": {
+            "CLP": {
+                "name": "Chilean peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Zambia",
+            "official": "Republic of Zambia",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Zambia",
+                    "common": "Zambia"
+                }
+            }
+        },
+        "cca2": "ZM",
+        "ccn3": "894",
+        "currencies": {
+            "ZMW": {
+                "name": "Zambian kwacha",
+                "symbol": "ZK"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Saint Lucia",
+            "official": "Saint Lucia",
+            "nativeName": {
+                "eng": {
+                    "official": "Saint Lucia",
+                    "common": "Saint Lucia"
+                }
+            }
+        },
+        "cca2": "LC",
+        "ccn3": "662",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Seychelles",
+            "official": "Republic of Seychelles",
+            "nativeName": {
+                "crs": {
+                    "official": "Repiblik Sesel",
+                    "common": "Sesel"
+                },
+                "eng": {
+                    "official": "Republic of Seychelles",
+                    "common": "Seychelles"
+                },
+                "fra": {
+                    "official": "République des Seychelles",
+                    "common": "Seychelles"
+                }
+            }
+        },
+        "cca2": "SC",
+        "ccn3": "690",
+        "currencies": {
+            "SCR": {
+                "name": "Seychellois rupee",
+                "symbol": "₨"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Benin",
+            "official": "Republic of Benin",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Bénin",
+                    "common": "Bénin"
+                }
+            }
+        },
+        "cca2": "BJ",
+        "ccn3": "204",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "United Kingdom",
+            "official": "United Kingdom of Great Britain and Northern Ireland",
+            "nativeName": {
+                "eng": {
+                    "official": "United Kingdom of Great Britain and Northern Ireland",
+                    "common": "United Kingdom"
+                }
+            }
+        },
+        "cca2": "GB",
+        "ccn3": "826",
+        "currencies": {
+            "GBP": {
+                "name": "British pound",
+                "symbol": "£"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Costa Rica",
+            "official": "Republic of Costa Rica",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Costa Rica",
+                    "common": "Costa Rica"
+                }
+            }
+        },
+        "cca2": "CR",
+        "ccn3": "188",
+        "currencies": {
+            "CRC": {
+                "name": "Costa Rican colón",
+                "symbol": "₡"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Comoros",
+            "official": "Union of the Comoros",
+            "nativeName": {
+                "ara": {
+                    "official": "الاتحاد القمري",
+                    "common": "القمر‎"
+                },
+                "fra": {
+                    "official": "Union des Comores",
+                    "common": "Comores"
+                },
+                "zdj": {
+                    "official": "Udzima wa Komori",
+                    "common": "Komori"
+                }
+            }
+        },
+        "cca2": "KM",
+        "ccn3": "174",
+        "currencies": {
+            "KMF": {
+                "name": "Comorian franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Iceland",
+            "official": "Iceland",
+            "nativeName": {
+                "isl": {
+                    "official": "Ísland",
+                    "common": "Ísland"
+                }
+            }
+        },
+        "cca2": "IS",
+        "ccn3": "352",
+        "currencies": {
+            "ISK": {
+                "name": "Icelandic króna",
+                "symbol": "kr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Japan",
+            "official": "Japan",
+            "nativeName": {
+                "jpn": {
+                    "official": "日本",
+                    "common": "日本"
+                }
+            }
+        },
+        "cca2": "JP",
+        "ccn3": "392",
+        "currencies": {
+            "JPY": {
+                "name": "Japanese yen",
+                "symbol": "¥"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Vatican City",
+            "official": "Vatican City State",
+            "nativeName": {
+                "ita": {
+                    "official": "Stato della Città del Vaticano",
+                    "common": "Vaticano"
+                },
+                "lat": {
+                    "official": "Status Civitatis Vaticanæ",
+                    "common": "Vaticanæ"
+                }
+            }
+        },
+        "cca2": "VA",
+        "ccn3": "336",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Fiji",
+            "official": "Republic of Fiji",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Fiji",
+                    "common": "Fiji"
+                },
+                "fij": {
+                    "official": "Matanitu Tugalala o Viti",
+                    "common": "Viti"
+                },
+                "hif": {
+                    "official": "रिपब्लिक ऑफ फीजी",
+                    "common": "फिजी"
+                }
+            }
+        },
+        "cca2": "FJ",
+        "ccn3": "242",
+        "currencies": {
+            "FJD": {
+                "name": "Fijian dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Bosnia and Herzegovina",
+            "official": "Bosnia and Herzegovina",
+            "nativeName": {
+                "bos": {
+                    "official": "Bosna i Hercegovina",
+                    "common": "Bosna i Hercegovina"
+                },
+                "hrv": {
+                    "official": "Bosna i Hercegovina",
+                    "common": "Bosna i Hercegovina"
+                },
+                "srp": {
+                    "official": "Босна и Херцеговина",
+                    "common": "Босна и Херцеговина"
+                }
+            }
+        },
+        "cca2": "BA",
+        "ccn3": "070",
+        "currencies": {
+            "BAM": {
+                "name": "Bosnia and Herzegovina convertible mark",
+                "symbol": ""
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Mexico",
+            "official": "United Mexican States",
+            "nativeName": {
+                "spa": {
+                    "official": "Estados Unidos Mexicanos",
+                    "common": "México"
+                }
+            }
+        },
+        "cca2": "MX",
+        "ccn3": "484",
+        "currencies": {
+            "MXN": {
+                "name": "Mexican peso",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Cambodia",
+            "official": "Kingdom of Cambodia",
+            "nativeName": {
+                "khm": {
+                    "official": "ព្រះរាជាណាចក្រកម្ពុជា",
+                    "common": "Kâmpŭchéa"
+                }
+            }
+        },
+        "cca2": "KH",
+        "ccn3": "116",
+        "currencies": {
+            "KHR": {
+                "name": "Cambodian riel",
+                "symbol": "៛"
+            },
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Saint Vincent and the Grenadines",
+            "official": "Saint Vincent and the Grenadines",
+            "nativeName": {
+                "eng": {
+                    "official": "Saint Vincent and the Grenadines",
+                    "common": "Saint Vincent and the Grenadines"
+                }
+            }
+        },
+        "cca2": "VC",
+        "ccn3": "670",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Iran",
+            "official": "Islamic Republic of Iran",
+            "nativeName": {
+                "fas": {
+                    "official": "جمهوری اسلامی ایران",
+                    "common": "ایران"
+                }
+            }
+        },
+        "cca2": "IR",
+        "ccn3": "364",
+        "currencies": {
+            "IRR": {
+                "name": "Iranian rial",
+                "symbol": "﷼"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Malta",
+            "official": "Republic of Malta",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Malta",
+                    "common": "Malta"
+                },
+                "mlt": {
+                    "official": "Repubblika ta ' Malta",
+                    "common": "Malta"
+                }
+            }
+        },
+        "cca2": "MT",
+        "ccn3": "470",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Serbia",
+            "official": "Republic of Serbia",
+            "nativeName": {
+                "srp": {
+                    "official": "Република Србија",
+                    "common": "Србија"
+                }
+            }
+        },
+        "cca2": "RS",
+        "ccn3": "688",
+        "currencies": {
+            "RSD": {
+                "name": "Serbian dinar",
+                "symbol": "дин."
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "United Arab Emirates",
+            "official": "United Arab Emirates",
+            "nativeName": {
+                "ara": {
+                    "official": "الإمارات العربية المتحدة",
+                    "common": "دولة الإمارات العربية المتحدة"
+                }
+            }
+        },
+        "cca2": "AE",
+        "ccn3": "784",
+        "currencies": {
+            "AED": {
+                "name": "United Arab Emirates dirham",
+                "symbol": "د.إ"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Azerbaijan",
+            "official": "Republic of Azerbaijan",
+            "nativeName": {
+                "aze": {
+                    "official": "Azərbaycan Respublikası",
+                    "common": "Azərbaycan"
+                },
+                "rus": {
+                    "official": "Азербайджанская Республика",
+                    "common": "Азербайджан"
+                }
+            }
+        },
+        "cca2": "AZ",
+        "ccn3": "031",
+        "currencies": {
+            "AZN": {
+                "name": "Azerbaijani manat",
+                "symbol": "₼"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Vanuatu",
+            "official": "Republic of Vanuatu",
+            "nativeName": {
+                "bis": {
+                    "official": "Ripablik blong Vanuatu",
+                    "common": "Vanuatu"
+                },
+                "eng": {
+                    "official": "Republic of Vanuatu",
+                    "common": "Vanuatu"
+                },
+                "fra": {
+                    "official": "République de Vanuatu",
+                    "common": "Vanuatu"
+                }
+            }
+        },
+        "cca2": "VU",
+        "ccn3": "548",
+        "currencies": {
+            "VUV": {
+                "name": "Vanuatu vatu",
+                "symbol": "Vt"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Niger",
+            "official": "Republic of Niger",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Niger",
+                    "common": "Niger"
+                }
+            }
+        },
+        "cca2": "NE",
+        "ccn3": "562",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Eritrea",
+            "official": "State of Eritrea",
+            "nativeName": {
+                "ara": {
+                    "official": "دولة إرتريا",
+                    "common": "إرتريا‎"
+                },
+                "eng": {
+                    "official": "State of Eritrea",
+                    "common": "Eritrea"
+                },
+                "tir": {
+                    "official": "ሃገረ ኤርትራ",
+                    "common": "ኤርትራ"
+                }
+            }
+        },
+        "cca2": "ER",
+        "ccn3": "232",
+        "currencies": {
+            "ERN": {
+                "name": "Eritrean nakfa",
+                "symbol": "Nfk"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Central African Republic",
+            "official": "Central African Republic",
+            "nativeName": {
+                "fra": {
+                    "official": "République centrafricaine",
+                    "common": "République centrafricaine"
+                },
+                "sag": {
+                    "official": "Ködörösêse tî Bêafrîka",
+                    "common": "Bêafrîka"
+                }
+            }
+        },
+        "cca2": "CF",
+        "ccn3": "140",
+        "currencies": {
+            "XAF": {
+                "name": "Central African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Israel",
+            "official": "State of Israel",
+            "nativeName": {
+                "ara": {
+                    "official": "دولة إسرائيل",
+                    "common": "إسرائيل"
+                },
+                "heb": {
+                    "official": "מדינת ישראל",
+                    "common": "ישראל"
+                }
+            }
+        },
+        "cca2": "IL",
+        "ccn3": "376",
+        "currencies": {
+            "ILS": {
+                "name": "Israeli new shekel",
+                "symbol": "₪"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Nepal",
+            "official": "Federal Democratic Republic of Nepal",
+            "nativeName": {
+                "nep": {
+                    "official": "नेपाल संघीय लोकतान्त्रिक गणतन्त्र",
+                    "common": "नेपाल"
+                }
+            }
+        },
+        "cca2": "NP",
+        "ccn3": "524",
+        "currencies": {
+            "NPR": {
+                "name": "Nepalese rupee",
+                "symbol": "₨"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Panama",
+            "official": "Republic of Panama",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Panamá",
+                    "common": "Panamá"
+                }
+            }
+        },
+        "cca2": "PA",
+        "ccn3": "591",
+        "currencies": {
+            "PAB": {
+                "name": "Panamanian balboa",
+                "symbol": "B/."
+            },
+            "USD": {
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Solomon Islands",
+            "official": "Solomon Islands",
+            "nativeName": {
+                "eng": {
+                    "official": "Solomon Islands",
+                    "common": "Solomon Islands"
+                }
+            }
+        },
+        "cca2": "SB",
+        "ccn3": "090",
+        "currencies": {
+            "SBD": {
+                "name": "Solomon Islands dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Zimbabwe",
+            "official": "Republic of Zimbabwe",
+            "nativeName": {
+                "bwg": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "eng": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "kck": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "khi": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "ndc": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "nde": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "nya": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "sna": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "sot": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "toi": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "tsn": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "tso": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "ven": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "xho": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                },
+                "zib": {
+                    "official": "Republic of Zimbabwe",
+                    "common": "Zimbabwe"
+                }
+            }
+        },
+        "cca2": "ZW",
+        "ccn3": "716",
+        "currencies": {
+            "ZWL": {
+                "name": "Zimbabwean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Brunei",
+            "official": "Nation of Brunei, Abode of Peace",
+            "nativeName": {
+                "msa": {
+                    "official": "Nation of Brunei, Abode Damai",
+                    "common": "Negara Brunei Darussalam"
+                }
+            }
+        },
+        "cca2": "BN",
+        "ccn3": "096",
+        "currencies": {
+            "BND": {
+                "name": "Brunei dollar",
+                "symbol": "$"
+            },
+            "SGD": {
+                "name": "Singapore dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Denmark",
+            "official": "Kingdom of Denmark",
+            "nativeName": {
+                "dan": {
+                    "official": "Kongeriget Danmark",
+                    "common": "Danmark"
+                }
+            }
+        },
+        "cca2": "DK",
+        "ccn3": "208",
+        "currencies": {
+            "DKK": {
+                "name": "Danish krone",
+                "symbol": "kr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Belgium",
+            "official": "Kingdom of Belgium",
+            "nativeName": {
+                "deu": {
+                    "official": "Königreich Belgien",
+                    "common": "Belgien"
+                },
+                "fra": {
+                    "official": "Royaume de Belgique",
+                    "common": "Belgique"
+                },
+                "nld": {
+                    "official": "Koninkrijk België",
+                    "common": "België"
+                }
+            }
+        },
+        "cca2": "BE",
+        "ccn3": "056",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Laos",
+            "official": "Lao People's Democratic Republic",
+            "nativeName": {
+                "lao": {
+                    "official": "ສາທາລະນະ ຊາທິປະໄຕ ຄົນລາວ ຂອງ",
+                    "common": "ສປປລາວ"
+                }
+            }
+        },
+        "cca2": "LA",
+        "ccn3": "418",
+        "currencies": {
+            "LAK": {
+                "name": "Lao kip",
+                "symbol": "₭"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Tonga",
+            "official": "Kingdom of Tonga",
+            "nativeName": {
+                "eng": {
+                    "official": "Kingdom of Tonga",
+                    "common": "Tonga"
+                },
+                "ton": {
+                    "official": "Kingdom of Tonga",
+                    "common": "Tonga"
+                }
+            }
+        },
+        "cca2": "TO",
+        "ccn3": "776",
+        "currencies": {
+            "TOP": {
+                "name": "Tongan paʻanga",
+                "symbol": "T$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Andorra",
+            "official": "Principality of Andorra",
+            "nativeName": {
+                "cat": {
+                    "official": "Principat d'Andorra",
+                    "common": "Andorra"
+                }
+            }
+        },
+        "cca2": "AD",
+        "ccn3": "020",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Lesotho",
+            "official": "Kingdom of Lesotho",
+            "nativeName": {
+                "eng": {
+                    "official": "Kingdom of Lesotho",
+                    "common": "Lesotho"
+                },
+                "sot": {
+                    "official": "Kingdom of Lesotho",
+                    "common": "Lesotho"
+                }
+            }
+        },
+        "cca2": "LS",
+        "ccn3": "426",
+        "currencies": {
+            "LSL": {
+                "name": "Lesotho loti",
+                "symbol": "L"
+            },
+            "ZAR": {
+                "name": "South African rand",
+                "symbol": "R"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Dominica",
+            "official": "Commonwealth of Dominica",
+            "nativeName": {
+                "eng": {
+                    "official": "Commonwealth of Dominica",
+                    "common": "Dominica"
+                }
+            }
+        },
+        "cca2": "DM",
+        "ccn3": "212",
+        "currencies": {
+            "XCD": {
+                "name": "Eastern Caribbean dollar",
+                "symbol": "$"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Somalia",
+            "official": "Federal Republic of Somalia",
+            "nativeName": {
+                "ara": {
+                    "official": "جمهورية الصومال‎‎",
+                    "common": "الصومال‎‎"
+                },
+                "som": {
+                    "official": "Jamhuuriyadda Federaalka Soomaaliya",
+                    "common": "Soomaaliya"
+                }
+            }
+        },
+        "cca2": "SO",
+        "ccn3": "706",
+        "currencies": {
+            "SOS": {
+                "name": "Somali shilling",
+                "symbol": "Sh"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Croatia",
+            "official": "Republic of Croatia",
+            "nativeName": {
+                "hrv": {
+                    "official": "Republika Hrvatska",
+                    "common": "Hrvatska"
+                }
+            }
+        },
+        "cca2": "HR",
+        "ccn3": "191",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Sierra Leone",
+            "official": "Republic of Sierra Leone",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Sierra Leone",
+                    "common": "Sierra Leone"
+                }
+            }
+        },
+        "cca2": "SL",
+        "ccn3": "694",
+        "currencies": {
+            "SLL": {
+                "name": "Sierra Leonean leone",
+                "symbol": "Le"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Burundi",
+            "official": "Republic of Burundi",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Burundi",
+                    "common": "Burundi"
+                },
+                "run": {
+                    "official": "Republika y'Uburundi ",
+                    "common": "Uburundi"
+                }
+            }
+        },
+        "cca2": "BI",
+        "ccn3": "108",
+        "currencies": {
+            "BIF": {
+                "name": "Burundian franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Senegal",
+            "official": "Republic of Senegal",
+            "nativeName": {
+                "fra": {
+                    "official": "République du Sénégal",
+                    "common": "Sénégal"
+                }
+            }
+        },
+        "cca2": "SN",
+        "ccn3": "686",
+        "currencies": {
+            "XOF": {
+                "name": "West African CFA franc",
+                "symbol": "Fr"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Ethiopia",
+            "official": "Federal Democratic Republic of Ethiopia",
+            "nativeName": {
+                "amh": {
+                    "official": "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ",
+                    "common": "ኢትዮጵያ"
+                }
+            }
+        },
+        "cca2": "ET",
+        "ccn3": "231",
+        "currencies": {
+            "ETB": {
+                "name": "Ethiopian birr",
+                "symbol": "Br"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Luxembourg",
+            "official": "Grand Duchy of Luxembourg",
+            "nativeName": {
+                "deu": {
+                    "official": "Großherzogtum Luxemburg",
+                    "common": "Luxemburg"
+                },
+                "fra": {
+                    "official": "Grand-Duché de Luxembourg",
+                    "common": "Luxembourg"
+                },
+                "ltz": {
+                    "official": "Groussherzogtum Lëtzebuerg",
+                    "common": "Lëtzebuerg"
+                }
+            }
+        },
+        "cca2": "LU",
+        "ccn3": "442",
+        "currencies": {
+            "EUR": {
+                "name": "Euro",
+                "symbol": "€"
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "China",
+            "official": "People's Republic of China",
+            "nativeName": {
+                "zho": {
+                    "official": "中华人民共和国",
+                    "common": "中国"
+                }
+            }
+        },
+        "cca2": "CN",
+        "ccn3": "156",
+        "currencies": {
+            "CNY": {
+                "name": "Chinese yuan",
+                "symbol": "¥"
+            }
+        }
+    }
+]
