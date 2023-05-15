@@ -3,35 +3,37 @@ import Image from 'next/image'
 import { checkQRIS, validate } from '@/lib/qris';
 import { useEffect, useState } from 'react'
 import countries from '../lib/countries.json'
-import { dynamicSort } from '@/lib/others';
-// let str = "00020101021126660014ID.LINKAJA.WWW011893600911002000451602152103121300045160303UMI51450015ID.OR.GPNQR.WWW02150000000000000000303UMI520454995802ID5903SGB6007JAKARTA610510110621007063282835303360630489C4"
-//let str = "00020101021151440014ID.CO.QRIS.WWW0215ID10200384380620303UMI5204737253033605802ID5910Zera Store6015Kota Balikpapan61057611663042CFE"
+import { dynamicSort, zPad } from '@/lib/others';
+
 export default function Home() {
   const [qris, setQris] = useState("")
   const [qrisData, setQrisData] = useState({})
-  const [con, setCountry] = useState([])
-  const handleQris = (e) => {
-    setQris(e.target.value)
-  }
+
   countries.sort(dynamicSort("common"))
 
+  // Handle Form
+  const handleQris = (e) => {
+    setQris(e.target.value)
+    if (validate(e.target.value)) {
+      let x = checkQRIS({}, e.target.value)
+      setQrisData(x)
+    }
+
+  }
   const handleChangeCurrency = (e) => {
 
   }
   const handleChangeCountry = (e) => {
 
   }
+  const handleMerchantName = (e) => {
+    var temp = { ...qrisData }
+    temp.merchantName.value = e.target.value
+    setQrisData(temp)
+  }
   useEffect(() => {
 
-    if (qris.length > 0) {
-      if (validate(qris)) {
-        let x = checkQRIS({}, qris)
-        setQrisData(x)
-      }
-      // console.log(country)
-    } else {
-    }
-  }, [qris, con])
+  }, [qris, qrisData])
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-16">
       <div className='flex flex-row gap-4'>
@@ -62,16 +64,16 @@ export default function Home() {
 
           <div className='grid grid-cols-3 gap-2'>
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>59</span>Name</div>
-              <input type="text" defaultValue={qrisData.merchantName ? qrisData.merchantName.value : ''} />
+              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.merchantName ? qrisData.merchantName.tags + zPad(qrisData.merchantName.value.length) : "5900"}</span>Name</div>
+              <input type="text" onChange={(e) => (handleMerchantName(e))} value={qrisData.merchantName ? qrisData.merchantName.value : ''} />
             </div>
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>60</span>City</div>
+              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.merchantCity ? qrisData.merchantCity.tags + zPad(qrisData.merchantCity.value.length) : "6000"}</span>City</div>
               <input type="text" defaultValue={qrisData.merchantCity ? qrisData.merchantCity.value : ''} />
             </div>
 
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>61</span>Postal Code</div>
+              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.postalCode ? qrisData.postalCode.tags + zPad(qrisData.postalCode.value.length) : "6100"}</span>Postal Code</div>
               <input type="text" defaultValue={qrisData.postalCode ? qrisData.postalCode.value : ''} />
             </div>
             <div className='flex flex-col gap-1'>
@@ -93,6 +95,10 @@ export default function Home() {
                   ))
                 }
               </select>
+            </div>
+            <div className={`flex flex-col gap-1 ${qrisData.method && qrisData.method.value == "11" ? 'hidden' : ''}`}>
+              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>54</span>Amount</div>
+              <input type="text" defaultValue={qrisData.transactionAmount ? qrisData.transactionAmount.value : ''} />
             </div>
           </div>
         </div>
