@@ -12,7 +12,6 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 2, 6, 23;
   }
-  
 }
 
 body {
@@ -20,11 +19,13 @@ body {
   background: rgb(var(--background-start-rgb));
 }
 
-input{
+input {
   @apply text-black px-2 py-1 text-sm rounded;
-  
 }
-select{
+select {
   @apply text-black px-2 py-1.5 text-sm rounded;
-  
+}
+
+a {
+  @apply text-sky-400 hover:text-sky-500;
 }

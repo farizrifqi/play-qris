@@ -2,107 +2,115 @@
 import Image from 'next/image'
 import { checkQRIS, validate } from '@/lib/qris';
 import { useEffect, useState } from 'react'
-import countries from '../lib/countries.json'
-import { dynamicSort, zPad } from '@/lib/others';
+import ReadOnlyData from './components/ReadOnlyData';
+import EditData from './components/EditData';
+import Footer from './components/Footer';
+import merchantcategorycode from "../lib/mcc.json";
+import QrCode from 'qrcode-reader'
 
 export default function Home() {
   const [qris, setQris] = useState("")
+  const [q, setQ] = useState("")
   const [qrisData, setQrisData] = useState({})
 
-  countries.sort(dynamicSort("common"))
+  const [newQris, setNewQris] = useState("")
+  const [newQrisData, setNewQrisData] = useState("")
 
+  const [qrisValid, setQrisValid] = useState(false)
+  const [errMsg, setErrMsg] = useState("")
   // Handle Form
-  const handleQris = (e) => {
+  const handleQ = (e) => {
+    setQ(e.target.value)
     setQris(e.target.value)
-    if (validate(e.target.value)) {
-      let x = checkQRIS({}, e.target.value)
-      setQrisData(x)
+  }
+  const readQrisData = (qris, u = false) => {
+    const isValid = validate(qris)
+    const tempQrisData = checkQRIS({}, qris)
+    setQrisValid(isValid && (tempQrisData.lengthData == qris.length) && !tempQrisData.invalid)
+    if (isValid) {
+      let x = tempQrisData
+      if (u) setQrisData(x)
+      setNewQris(qris)
+      setNewQrisData(x)
     }
-
   }
-  const handleChangeCurrency = (e) => {
-
+  const uploadToClient = (e) => {
+    let files = [...e.target.files];
+    if (files && files.length == 1) {
+      if (!files[0].type.includes("image")) {
+        setErrMsg("File should be an image")
+        return
+      };
+      const blob = new Blob(files, { type: files[0].type })
+      const img = URL.createObjectURL(blob);
+      const qr = new QrCode()
+      qr.callback = function (error, result) {
+        if (error) {
+          setErrMsg(error)
+          return;
+        }
+        if (validate(result?.result)) {
+          setQris(result?.result)
+          return;
+        }
+        setErrMsg("Seems not a valid QRIS")
+        return;
+      }
+      qr.decode(img)
+      return;
+    }
+    setErrMsg("File 1 ja")
+    return
   }
-  const handleChangeCountry = (e) => {
-
-  }
-  const handleMerchantName = (e) => {
-    var temp = { ...qrisData }
-    temp.merchantName.value = e.target.value
-    setQrisData(temp)
+  const pushNewQrisData = (data) => {
+    let tmep = data
+    setNewQris(tmep)
   }
   useEffect(() => {
-
-  }, [qris, qrisData])
+    readQrisData(newQris)
+  }, [newQris])
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-16">
+    <main className="flex min-h-screen flex-col items-center justify-center">
       <div className='flex flex-row gap-4'>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col gap-2 p-5 bg-slate-900 rounded-lg'>
             <h1 className='font-bold'>QRIS DATA</h1>
-            <textarea className='p-2 text-black w-full rounded text-xs resize-none h-24'
+            <input onChange={uploadToClient} type="file" className="text-white text-sm w-full border" accept="image/png, image/jpeg, image/jpg" />
+            <div className='text-xs w-full text-center'>OR</div>
+            <textarea className='p-2 text-black w-full rounded text-xs resize-none h-28'
               onChange={
-                (e) => {
-                  handleQris(e)
-                }
-              } spellCheck={false}>
+                (e) =>
+                  handleQ(e)
+
+              } value={qris} spellCheck={false}>
             </textarea>
+            <button onClick={() => { readQrisData(qris, true) }} className='bg-emerald-500 py-1 rounded hover:bg-emerald-400 transition-all'>Read Data</button>
           </div>
-          <div className={`flex flex-col gap-2 p-5 bg-slate-900 rounded-lg ${validate(qris) ? 'block' : 'hidden'}`}>
-            <h1 className='font-bold'>QR CODE</h1>
+          <div className={`flex flex-col gap-2 p-5 bg-slate-900 rounded-lg `}>
+            <h1 className='font-bold'>Result</h1>
+
+            <textarea className='p-2 text-black w-full rounded text-xs resize-none h-28'
+              value={newQris}
+              spellCheck={false}
+              readOnly
+            >
+
+            </textarea>
+            <h1 className='font-bold'>QR Code</h1>
             <Image
-              src={`https://chart.googleapis.com/chart?cht=qr&chl=${qris}&chs=500x500&choe=UTF-8&chld=L|2%22%20rel=%22nofollow%22%20alt=%22qr%20code%22`}
+              src={`https://chart.googleapis.com/chart?cht=qr&chl=${newQris}&chs=500x500&choe=UTF-8&chld=L|2%22%20rel=%22nofollow%22%20alt=%22qr%20code%22`}
               width={300}
               height={300}
               alt="QRIS"
             />
           </div>
         </div>
-        <div className='flex flex-col gap-2 p-5 bg-slate-900 rounded-lg text-sm'>
-          <span>Version: {qrisData.ver ? parseInt(qrisData.ver.value) : ''}</span>
-          <span>Type: {qrisData.method ? (parseInt(qrisData.method.value) == 11 ? "Static" : parseInt(qrisData.method.value) == 12 ? "Dynamic" : parseInt(qrisData.method.value)) : ''}</span>
-
-          <div className='grid grid-cols-3 gap-2'>
-            <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.merchantName ? qrisData.merchantName.tags + zPad(qrisData.merchantName.value.length) : "5900"}</span>Name</div>
-              <input type="text" onChange={(e) => (handleMerchantName(e))} value={qrisData.merchantName ? qrisData.merchantName.value : ''} />
-            </div>
-            <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.merchantCity ? qrisData.merchantCity.tags + zPad(qrisData.merchantCity.value.length) : "6000"}</span>City</div>
-              <input type="text" defaultValue={qrisData.merchantCity ? qrisData.merchantCity.value : ''} />
-            </div>
-
-            <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>{qrisData.postalCode ? qrisData.postalCode.tags + zPad(qrisData.postalCode.value.length) : "6100"}</span>Postal Code</div>
-              <input type="text" defaultValue={qrisData.postalCode ? qrisData.postalCode.value : ''} />
-            </div>
-            <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>61</span>Country</div>
-              <select value={qrisData.countryCode ? qrisData.countryCode.value : ''} onChange={(e) => { handleChangeCountry(e) }}>
-                {
-                  countries.map((c, i) => (
-                    <option key={i} value={c.cca2}>{c.name.common}</option>
-                  ))
-                }
-              </select>
-            </div>
-            <div className='flex flex-col gap-1'>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>53</span>Currency</div>
-              <select value={qrisData.currency ? qrisData.currency.value : ''} onChange={(e) => { handleChangeCurrency(e) }}>
-                {
-                  countries.map((c, i) => (
-                    <option key={i} value={c.ccn3}>{c.name.common} &ndash; {Object.keys(c.currencies)[0]}</option>
-                  ))
-                }
-              </select>
-            </div>
-            <div className={`flex flex-col gap-1 ${qrisData.method && qrisData.method.value == "11" ? 'hidden' : ''}`}>
-              <div className='flex flex-row items-center gap-1'><span className='rounded text-xs bg-slate-700 p-0.5'>54</span>Amount</div>
-              <input type="text" defaultValue={qrisData.transactionAmount ? qrisData.transactionAmount.value : ''} />
-            </div>
-          </div>
+        <div className="flex flex-col gap-3 items-start justify-center">
+          {qris == "" ? "" : !qrisValid || qrisData?.invalid || errMsg ? errMsg || "Invalid QRIS" : <ReadOnlyData merchantcategorycode={merchantcategorycode} qrisData={qrisData} />}
+          {/* {qrisValid ? <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} /> : ""} */}
         </div>
       </div>
+      <Footer />
     </main>
   )
 }
