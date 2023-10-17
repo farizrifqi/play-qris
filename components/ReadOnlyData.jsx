@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 countries.sort(dynamicSort("common"));
 
 export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
-  console.log({ qrisData });
   // const [qrisData, setQrisData] = useState(q);
   // useEffect(() => {
   //   setQrisData(q);

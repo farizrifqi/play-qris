@@ -3,12 +3,11 @@ import { dynamicSort, zPad } from "@/lib/others";
 import countries from "../lib/countries.json";
 import { useState } from "react";
 import merchantcategorycode from "../lib/mcc.json";
+import crc16ccitt from "@/lib/crc16ccitt";
 
 countries.sort(dynamicSort("common"));
 
 export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
-  console.log(merchantcategorycode);
-
   const [tempData, setTempData] = useState(newQrisData);
 
   const getFullValue = (tags, value) => {
@@ -20,14 +19,34 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
     "03": "In Percent",
   };
   const changeData = (e, key1) => {
-    if (key1 == "transactionAmount") {
-      if (!newQrisData[key1]) {
-        let temp = newQrisData;
-        temp[key1] = {
-          tags: "54",
-          value: "12",
-        };
-        newQrisData[key1] = temp[key1];
+    if (!newQrisData[key1]) {
+      if (key1 == "transactionAmount") {
+        if (e.target.value != "" && e.target.value != 0) {
+          //* Add key "transactionAmount" to ObjectData
+          let temp = newQrisData;
+          temp[key1] = {
+            tags: "54",
+            value: e.target.value,
+          };
+
+          // * Add str to Qris Data
+          const countryData = `5802${newQrisData["countryCode"].value}`;
+
+          newQris = newQris.replace(
+            countryData,
+            `54${zPad(e.target.value.length)}${e.target.value}${countryData}`
+          );
+
+          // * Change Method to dynamic
+          temp["method"] = {
+            tags: "01",
+            value: "12",
+          };
+          // * Change method on QRIS str
+          newQris = newQris.replace("010211", `010212`);
+          // * Save QRIS ObjectData
+          newQrisData[key1] = temp[key1];
+        }
       }
     }
     let tempChangeQris = newQris;
@@ -42,6 +61,18 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
     const newVal = getFullValue(tempChangeQrisData[key1].tags, e.target.value);
     tempChangeQris = tempChangeQris.replace(oldVal, newVal);
     setTempData(tempChangeQrisData);
+
+    //! Re-checksum
+
+    tempChangeQris = tempChangeQris.replace(
+      tempChangeQrisData.checksum.value,
+      ""
+    );
+    const newChecksum =
+      crc16ccitt(tempChangeQris).length == 3
+        ? `0${crc16ccitt(tempChangeQris)}`.toString(16)
+        : crc16ccitt(tempChangeQris).toString(16);
+    tempChangeQris = `${tempChangeQris}${newChecksum.toUpperCase()}`;
     pushNewQrisData(tempChangeQris);
   };
 

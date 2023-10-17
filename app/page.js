@@ -71,7 +71,7 @@ export default function Home() {
   }, [newQris])
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className='flex flex-row gap-4'>
+      <div className='flex flex-col-reverse	lg:flex-row gap-4'>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col gap-2 p-5 bg-slate-900 rounded-lg'>
             <h1 className='font-bold'>QRIS DATA</h1>
