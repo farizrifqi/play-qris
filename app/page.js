@@ -2,9 +2,9 @@
 import Image from 'next/image'
 import { checkQRIS, validate } from '@/lib/qris';
 import { useEffect, useState } from 'react'
-import ReadOnlyData from './components/ReadOnlyData';
-import EditData from './components/EditData';
-import Footer from './components/Footer';
+import ReadOnlyData from '../components/ReadOnlyData';
+import EditData from '../components/EditData';
+import Footer from '../components/Footer';
 import merchantcategorycode from "../lib/mcc.json";
 import QrCode from 'qrcode-reader'
 
@@ -107,7 +107,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-3 items-start justify-center">
           {qris == "" ? "" : !qrisValid || qrisData?.invalid || errMsg ? errMsg || "Invalid QRIS" : <ReadOnlyData merchantcategorycode={merchantcategorycode} qrisData={qrisData} />}
-          {/* {qrisValid ? <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} /> : ""} */}
+          {qrisValid ? <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} /> : ""}
         </div>
       </div>
       <Footer />

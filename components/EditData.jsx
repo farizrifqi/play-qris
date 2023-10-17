@@ -1,12 +1,14 @@
 "use client";
 import { dynamicSort, zPad } from "@/lib/others";
-import countries from "../../lib/countries.json";
+import countries from "../lib/countries.json";
 import { useState } from "react";
-import merchantcategorycode from "../../lib/mcc.json";
+import merchantcategorycode from "../lib/mcc.json";
 
 countries.sort(dynamicSort("common"));
 
 export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
+  console.log(merchantcategorycode);
+
   const [tempData, setTempData] = useState(newQrisData);
 
   const getFullValue = (tags, value) => {
@@ -81,6 +83,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
           ""
         )}
         {/* 
+        // ! BUG
         {tempData.categoryMerchant ? (
           <div className="flex flex-col gap-1">
             <div className="flex flex-row items-center gap-1">
@@ -239,6 +242,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
           ""
         )}
         {/* {newQrisData.tipOrConvenienceIndicator &&
+        // todo
         (newQrisData.tipOrConvenienceIndicator.value >= 2) |
           (newQrisData.tipOrConvenienceIndicator.value <= 3) ? (
           <div className={`flex flex-col gap-1`}>

@@ -1,6 +1,6 @@
 "use client";
 import { dynamicSort, zPad } from "@/lib/others";
-import countries from "../../lib/countries.json";
+import countries from "../lib/countries.json";
 import { useEffect, useState } from "react";
 
 countries.sort(dynamicSort("common"));
