@@ -44,6 +44,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
           };
           // * Change method on QRIS str
           newQris = newQris.replace("010211", `010212`);
+
           // * Save QRIS ObjectData
           newQrisData[key1] = temp[key1];
         }
@@ -163,7 +164,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
                 {newQrisData.postalCode.tags +
                   zPad(newQrisData.postalCode.value.length)}
               </span>
-              Postal Code
+              Postal
             </div>
             <input
               type="text"

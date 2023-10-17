@@ -118,7 +118,7 @@ export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
                   zPad(qrisData.postalCode.value.length)
                 : "6100"}
             </span>
-            Postal Code
+            Postal
           </div>
           <input
             disabled
