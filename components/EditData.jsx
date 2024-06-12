@@ -256,12 +256,13 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
               <span className="rounded text-xs bg-slate-700 p-0.5">
                 55{zPad(newQrisData.tipOrConvenienceIndicator.value.length)}
               </span>
-              Tax System
+              Tax System (TO-DO)
             </div>
             <select
               className="text-xs"
               onChange={(e) => changeData(e, "tipOrConvenienceIndicator")}
               value={newQrisData.tipOrConvenienceIndicator.value}
+              disabled
             >
               {Object.keys(indicatorMeaning).map((key) => (
                 <option key={key} value={key}>
@@ -273,10 +274,10 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
         ) : (
           ""
         )}
-        {/* {newQrisData.tipOrConvenienceIndicator &&
-        // todo
-        (newQrisData.tipOrConvenienceIndicator.value >= 2) |
-          (newQrisData.tipOrConvenienceIndicator.value <= 3) ? (
+        {/* {(newQrisData.tipOrConvenienceIndicator &&
+          // todo
+          newQrisData.tipOrConvenienceIndicator.value >= 2) ||
+        newQrisData.tipOrConvenienceIndicator.value <= 3 ? (
           <div className={`flex flex-col gap-1`}>
             <div className="flex flex-row items-center gap-1">
               <span className="rounded text-xs bg-slate-700 p-0.5">

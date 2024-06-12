@@ -8,6 +8,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/chart/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'api.qrserver.com',
+                port: '',
+                pathname: '/v1/**',
+            },
         ],
     }
 }

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 countries.sort(dynamicSort("common"));
 
 export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
+  console.log({ qrisData });
   // const [qrisData, setQrisData] = useState(q);
   // useEffect(() => {
   //   setQrisData(q);
@@ -203,8 +204,8 @@ export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
         {qrisData.tipOrConvenienceIndicator ? (
           <div
             className={`flex flex-col gap-1 ${
-              parseInt(qrisData.tipOrConvenienceIndicator.value) > 3 ||
-              parseInt(qrisData.tipOrConvenienceIndicator.value) < 1
+              parseInt(qrisData.tipOrConvenienceIndicator.value) <= 3 ||
+              parseInt(qrisData.tipOrConvenienceIndicator.value) >= 1
                 ? "hidden"
                 : ""
             }`}
@@ -241,16 +242,19 @@ export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
                 : ""
             }`}
           >
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
+            {qrisData.tipOrConvenienceIndicator.value == "02" && (
+              <div className="flex flex-row items-center gap-1">
+                <span className="rounded text-xs bg-slate-700 p-0.5">
+                  {qrisData.tipOrConvenienceIndicator.value == "02"
+                    ? `56${zPad(qrisData.fixedFee.value.length)}`
+                    : `57${zPad(qrisData.percentFee.value.length)}`}
+                </span>
                 {qrisData.tipOrConvenienceIndicator.value == "02"
-                  ? `56${zPad(qrisData.fixedFee.value.length)}`
-                  : `57${zPad(qrisData.percentFee.value.length)}`}
-              </span>
-              {qrisData.tipOrConvenienceIndicator.value == "02"
-                ? "Fixed Tax"
-                : "Percent Tax"}
-            </div>
+                  ? "Fixed Tax"
+                  : "Percent Tax"}
+              </div>
+            )}
+
             <input
               disabled
               type="text"
@@ -259,13 +263,15 @@ export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
                   ? `${
                       getCountryCurrency(qrisData.currency.value).symbolPendek
                     } ${qrisData.fixedFee.value}`
-                  : `${qrisData.percentFee.value}% (${
+                  : qrisData.percentFee?.value
+                  ? `${qrisData.percentFee.value}% (${
                       getCountryCurrency(qrisData.currency.value).symbolPendek
                     } ${
                       (qrisData.percentFee.value *
                         qrisData.transactionAmount.value) /
                       100
                     })`
+                  : ""
               }
             />
           </div>

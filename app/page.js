@@ -18,7 +18,6 @@ export default function Home() {
 
   const [qrisValid, setQrisValid] = useState(false)
   const [errMsg, setErrMsg] = useState("")
-  // Handle Form
   const handleQ = (e) => {
     setQ(e.target.value)
     setQris(e.target.value)
@@ -35,6 +34,7 @@ export default function Home() {
     }
   }
   const uploadToClient = (e) => {
+    setErrMsg("")
     let files = [...e.target.files];
     if (files && files.length == 1) {
       if (!files[0].type.includes("image")) {
@@ -51,6 +51,7 @@ export default function Home() {
         }
         if (validate(result?.result)) {
           setQris(result?.result)
+          readQrisData(result?.result, true)
           return;
         }
         setErrMsg("Seems not a valid QRIS")
@@ -71,7 +72,7 @@ export default function Home() {
   }, [newQris])
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className='flex flex-col-reverse	lg:flex-row gap-4'>
+      <div className='flex flex-col-reverse	lg:flex-row gap-4 pt-1'>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col gap-2 p-5 bg-slate-900 rounded-lg'>
             <h1 className='font-bold'>QRIS DATA</h1>
@@ -85,6 +86,7 @@ export default function Home() {
               } value={qris} spellCheck={false}>
             </textarea>
             <button onClick={() => { readQrisData(qris, true) }} className='bg-emerald-500 py-1 rounded hover:bg-emerald-400 transition-all'>Read Data</button>
+            {errMsg ? <div className='text-center bg-red-500 text-sm'>{errMsg}</div> : ""}
           </div>
           <div className={`flex flex-col gap-2 p-5 bg-slate-900 rounded-lg `}>
             <h1 className='font-bold'>Result</h1>
@@ -98,7 +100,7 @@ export default function Home() {
             </textarea>
             <h1 className='font-bold'>QR Code</h1>
             <Image
-              src={`https://chart.googleapis.com/chart?cht=qr&chl=${newQris}&chs=500x500&choe=UTF-8&chld=L|2%22%20rel=%22nofollow%22%20alt=%22qr%20code%22`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${newQris}`}
               width={300}
               height={300}
               alt="QRIS"
@@ -106,8 +108,17 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col gap-3 items-start justify-center">
-          {qris == "" ? "" : !qrisValid || qrisData?.invalid || errMsg ? errMsg || "Invalid QRIS" : <ReadOnlyData merchantcategorycode={merchantcategorycode} qrisData={qrisData} />}
-          {qrisValid ? <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} /> : ""}
+          {qris == ""
+            ? ""
+            : !qrisValid || qrisData?.invalid || errMsg
+              ? errMsg || "Invalid QRIS"
+              : <>
+                <ReadOnlyData merchantcategorycode={merchantcategorycode} qrisData={qrisData} />
+                <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} />
+              </>
+          }
+
+          {/* {qris == "" ? "" : !qrisValid || qrisData?.invalid || errMsg ? errMsg || "Invalid QRIS" : <EditData merchantcategorycode={merchantcategorycode} newQrisData={newQrisData} newQris={newQris} pushNewQrisData={pushNewQrisData} />} */}
         </div>
       </div>
       <Footer />

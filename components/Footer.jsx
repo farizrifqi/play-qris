@@ -20,7 +20,7 @@ export default function Footer() {
     },
   ];
   return (
-    <div className="w-full flex flex-col items-center text-xs py-10 gap-2">
+    <div className="w-full flex flex-col items-center text-xs py-3 gap-2">
       <div className="flex items-center gap-1 ">
         {links.map((link, i) => (
           <div key={link.label}>
