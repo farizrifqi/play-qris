@@ -21,7 +21,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
   const changeData = (e, key1) => {
     if (!newQrisData[key1]) {
       if (key1 == "transactionAmount") {
-        if (e.target.value != "" && e.target.value != 0) {
+        if (e.target.value != "" && e.target.value != "0") {
           //* Add key "transactionAmount" to ObjectData
           let temp = newQrisData;
           temp[key1] = {
