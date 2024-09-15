@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'PlayQRIS',
-  description: 'Play with QRIS',
+  description: 'Effortlessly manage and interact with QRIS Indonesia Payment data on our platform. Easily read, modify, and update transaction details in a secure and user-friendly interface, streamlining your digital payment experience.',
 }
 
 export default function RootLayout({ children }) {

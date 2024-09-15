@@ -74,9 +74,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className='flex flex-col-reverse	lg:flex-row gap-4 pt-1'>
         <div className='flex flex-col gap-5'>
+          <h1 class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-4xl sm:text-4xl font-extrabold text-center">PlayQRIS </h1>
+
           <div className='flex flex-col gap-2 p-5 bg-slate-900 rounded-lg'>
             <h1 className='font-bold'>QRIS DATA</h1>
-            <input onChange={uploadToClient} type="file" className="text-white text-sm w-full border" accept="image/png, image/jpeg, image/jpg" />
+            <input onChange={uploadToClient} type="file" className="text-white text-sm w-full border border-slate-800" accept="image/png, image/jpeg, image/jpg" />
             <div className='text-xs w-full text-center'>OR</div>
             <textarea className='p-2 text-black w-full rounded text-xs resize-none h-28'
               onChange={
@@ -88,7 +90,7 @@ export default function Home() {
             <button onClick={() => { readQrisData(qris, true) }} className='bg-emerald-500 py-1 rounded hover:bg-emerald-400 transition-all'>Read Data</button>
             {errMsg ? <div className='text-center bg-red-500 text-sm'>{errMsg}</div> : ""}
           </div>
-          <div className={`flex flex-col gap-2 p-5 bg-slate-900 rounded-lg `}>
+          {newQris && (<div className={`flex flex-col gap-2 p-5 bg-slate-900 rounded-lg `}>
             <h1 className='font-bold'>Result</h1>
 
             <textarea className='p-2 text-black w-full rounded text-xs resize-none h-28'
@@ -105,7 +107,7 @@ export default function Home() {
               height={300}
               alt="QRIS"
             />
-          </div>
+          </div>)}
         </div>
         <div className="flex flex-col gap-3 items-start justify-center">
           {qris == ""

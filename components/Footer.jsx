@@ -18,20 +18,23 @@ export default function Footer() {
       href: "https://restcountries.com/",
       label: "Country API Data",
     },
+    {
+      href: "https://github.com/farizrifqi/play-qris",
+      label: "Github Repository",
+    },
   ];
   return (
     <div className="w-full flex flex-col items-center text-xs py-3 gap-2">
-      <div className="flex items-center gap-1 ">
+      <div className="sm:flex grid grid-cols-2 items-center gap-1 gap-x-5">
         {links.map((link, i) => (
-          <div key={link.label}>
-            {i == 0 ? " " : " • "}
+          <div key={link.label} className="underline">
             <Link href={link.href}>{link.label}</Link>
           </div>
         ))}
       </div>
 
       <div className="text-sm">
-        By FZ with <span className="text-red-400">♥</span>
+        By Fariz Rifqi with <span className="text-red-400">♥</span>
       </div>
     </div>
   );

@@ -23,6 +23,7 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
       if (key1 == "transactionAmount") {
         if (e.target.value != "" && e.target.value != "0") {
           //* Add key "transactionAmount" to ObjectData
+
           let temp = newQrisData;
           temp[key1] = {
             tags: "54",
@@ -36,7 +37,6 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
             countryData,
             `54${zPad(e.target.value.length)}${e.target.value}${countryData}`
           );
-
           // * Change Method to dynamic
           temp["method"] = {
             tags: "01",
@@ -48,6 +48,26 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
           // * Save QRIS ObjectData
           newQrisData[key1] = temp[key1];
         }
+      } else {
+        let temp = newQrisData;
+        temp[key1] = {
+          tags: "54",
+          value: 0,
+        };
+        const countryData = `5802${newQrisData["countryCode"].value}`;
+        newQris = newQris.replace(
+          countryData,
+          `54${zPad(e.target.value.length)}${e.target.value}${countryData}`
+        );
+        temp["method"] = {
+          tags: "01",
+          value: "11",
+        };
+        // * Change method on QRIS str
+        newQris = newQris.replace("010211", `010211`);
+
+        // * Save QRIS ObjectData
+        newQrisData[key1] = temp[key1];
       }
     }
     let tempChangeQris = newQris;
