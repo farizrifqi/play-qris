@@ -36,15 +36,23 @@ export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
           countryData,
           `54${zPad(newValue.length)}${newValue}${countryData}`
         );
-        newQrisData[key] = { tags: "54", value: newValue };
-        newQrisData.method = { tags: "01", value: "12" };
+        // Build new object instead of mutating prop
+        const updatedData = {
+          ...newQrisData,
+          [key]: { tags: "54", value: newValue },
+          method: { tags: "01", value: "12" },
+        };
+        setTempData(updatedData);
         pushNewQrisData(updatedQris.replace("010211", "010212"));
       }
       return;
     }
 
-    // Standard field update
-    const updatedData = { ...newQrisData, [key]: { ...newQrisData[key], value: newValue } };
+    // Standard field update — build immutable copy
+    const updatedData = {
+      ...newQrisData,
+      [key]: { ...newQrisData[key], value: newValue },
+    };
     const oldFullValue = getFieldTag(newQrisData[key]) + newQrisData[key].value;
     const newFullValue = getFieldTag(updatedData[key]) + newValue;
     let updatedQris = newQris.replace(oldFullValue, newFullValue);
