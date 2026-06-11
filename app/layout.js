@@ -90,6 +90,27 @@ export const metadata = {
   manifest: "/manifest.json",
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "PlayQRIS",
+  url: "https://play-qris.vercel.app",
+  description:
+    "Read, validate, and edit QRIS (Indonesian QR Code Standard) payment data.",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  author: {
+    "@type": "Person",
+    name: "Fariz Rifqi",
+    url: "https://github.com/farizrifqi",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -106,6 +127,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://api.qrserver.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://api.qrserver.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
