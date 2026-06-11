@@ -8,7 +8,7 @@ export default function robots() {
         disallow: ["/api/*", "/_next/*"],
       },
     ],
-    sitemap: "https://play-qris.vercel.app/sitemap.xml",
-    host: "https://play-qris.vercel.app",
+    sitemap: "https://qris.zeranel.dev/sitemap.xml",
+    host: "https://qris.zeranel.dev",
   };
 }

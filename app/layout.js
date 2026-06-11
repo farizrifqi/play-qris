@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://play-qris.vercel.app"),
+  metadataBase: new URL("https://qris.zeranel.dev"),
   title: {
     default: "PlayQRIS — Read & Edit QRIS Payment Data",
     template: "%s | PlayQRIS",
@@ -42,7 +42,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: ["id_ID"],
-    url: "https://play-qris.vercel.app",
+    url: "https://qris.zeranel.dev",
     siteName: "PlayQRIS",
     title: "PlayQRIS — Read & Edit QRIS Payment Data",
     description:
@@ -77,10 +77,10 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://play-qris.vercel.app",
+    canonical: "https://qris.zeranel.dev",
     languages: {
-      en: "https://play-qris.vercel.app",
-      id: "https://play-qris.vercel.app/id",
+      en: "https://qris.zeranel.dev",
+      id: "https://qris.zeranel.dev/id",
     },
   },
   icons: {
@@ -94,7 +94,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "PlayQRIS",
-  url: "https://play-qris.vercel.app",
+  url: "https://qris.zeranel.dev",
   description:
     "Read, validate, and edit QRIS (Indonesian QR Code Standard) payment data.",
   applicationCategory: "FinanceApplication",
