@@ -2,7 +2,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://play-qris.vercel.app",
+      url: "https://qris.zeranel.dev",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1.0,
