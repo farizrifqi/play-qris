@@ -297,13 +297,17 @@ export default function Home() {
           </div>
         )}
 
-        <div className="mt-8 text-center text-slate-500 text-sm">
+        <div className="mt-8 text-center text-slate-500 text-sm space-y-3">
           <p>
-            Built with <span className="text-red-400">♥</span> by Fariz Rifqi •{" "}
-            <a href="https://github.com/farizrifqi/play-qris" className="text-blue-400 hover:underline">
-              GitHub Repository
-            </a>
+            Built with <span className="text-red-400">♥</span> by Fariz Rifqi
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <a href="https://www.emvco.com/emv-technologies/qr-codes/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">EMVCo</a>
+            <a href="https://www.ecb.europa.eu/paym/groups/erpb/shared/pdf/16th-ERPB-meeting/Standardisation_and_governance_of_QR-codes_for_instant_payments_at_the_point-of-interaction.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">EPC</a>
+            <a href="https://github.com/Rebilly/merchant-category-codes" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Merchant Category Codes</a>
+            <a href="https://restcountries.com/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Country API Data</a>
+            <a href="https://github.com/farizrifqi/play-qris" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+          </div>
         </div>
       </div>
     </main>
