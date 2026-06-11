@@ -57,7 +57,7 @@ export default function Home() {
           URL.revokeObjectURL(img);
           setIsLoading(false);
           if (error) {
-            setErrMsg(error);
+            setErrMsg(error?.message ?? String(error) ?? "Unknown error decoding QR image");
             return;
           }
           if (validate(result?.result)) {
