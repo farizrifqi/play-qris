@@ -43,7 +43,7 @@ function DataField({ label, tag, value, suffix = "" }) {
         disabled
         type="text"
         className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm text-slate-300"
-        defaultValue={value + suffix}
+        value={(value ?? '') + suffix}
       />
     </div>
   );
