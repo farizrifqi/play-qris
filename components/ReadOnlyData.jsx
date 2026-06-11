@@ -1,284 +1,200 @@
 "use client";
-import { dynamicSort, zPad } from "@/lib/others";
+import { zPad } from "@/lib/others";
 import countries from "../lib/countries.json";
-import { useEffect, useState } from "react";
 
-countries.sort(dynamicSort("common"));
+const countryMap = new Map(countries.map(c => [c.cca2, c]));
+const currencyMap = new Map(countries.map(c => [c.ccn3, c]));
+
+function getCountryName(countryCode) {
+  return countryMap.get(countryCode)?.name.common ?? "";
+}
+
+function getCurrencyInfo(currencyCode) {
+  const country = currencyMap.get(currencyCode);
+  if (!country) return null;
+  const code = Object.keys(country.currencies)[0];
+  return {
+    symbol: country.currencies[code].symbol,
+    code,
+    name: country.currencies[code].name,
+  };
+}
+
+function getMerchantCategoryName(code, merchantcategorycode) {
+  return merchantcategorycode.find(c => c.id === code)?.description ?? "Unknown";
+}
+
+const TIP_INDICATOR_MEANING = {
+  "01": "Customer Input",
+  "02": "Fixed",
+  "03": "In Percent",
+};
+
+function DataField({ label, tag, value, suffix = "" }) {
+  return (
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-row items-center gap-1">
+        <span className="rounded text-xs bg-slate-700 p-0.5 font-mono">
+          {tag}
+        </span>
+        <span className="text-slate-300">{label}</span>
+      </div>
+      <input
+        disabled
+        type="text"
+        className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm text-slate-300"
+        defaultValue={value + suffix}
+      />
+    </div>
+  );
+}
 
 export default function ReadOnlyData({ merchantcategorycode, qrisData }) {
-  console.log({ qrisData });
-  // const [qrisData, setQrisData] = useState(q);
-  // useEffect(() => {
-  //   setQrisData(q);
-  // }, [q]);
-  const getCountryName = (countryCode) => {
-    return countries.filter((c) => c.cca2 == countryCode)[0]?.name.common;
-  };
-  const getCountryCurrency = (currencyCode) => {
-    const dataCountry = countries.filter((c) => c.ccn3 == currencyCode)[0];
-    const currenciesCC = Object.keys(dataCountry?.currencies)[0];
-    return {
-      symbolPendek: dataCountry.currencies[currenciesCC].symbol,
-      symbolPanjang: currenciesCC,
-      nama: dataCountry.currencies[currenciesCC].name,
-    };
-  };
-  const getCategoryMerchant = (code) => {
-    return (
-      merchantcategorycode.filter((c) => (c.id = code))[0]?.description ||
-      "Unknown"
-    );
-  };
-  const indicatorMeaning = {
-    "01": "Customer Input",
-    "02": "Fixed",
-    "03": "In Percent",
-  };
+  const currencyInfo = qrisData.currency?.value
+    ? getCurrencyInfo(qrisData.currency.value)
+    : null;
+
+  const isStatic = qrisData.method?.value === "11";
+  const isDynamic = qrisData.method?.value === "12";
+
   return (
-    <div className="flex flex-col gap-2 p-5 bg-slate-900 rounded-lg text-sm">
-      <div className="text-lg font-bold border-b border-gray-700 py-1">
-        Original Data
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-3 text-sm">
+        <span className="text-slate-400">
+          Version: {qrisData.ver?.value ?? "—"}
+        </span>
+        <span className="text-slate-400">•</span>
+        <span className={`font-medium ${isDynamic ? "text-emerald-400" : "text-blue-400"}`}>
+          {isStatic ? "Static" : isDynamic ? "Dynamic" : "—"}
+        </span>
       </div>
-      <span>Version: {qrisData.ver ? parseInt(qrisData.ver.value) : ""}</span>
-      <span>
-        Type:{" "}
-        {qrisData.method
-          ? parseInt(qrisData.method.value) == 11
-            ? "Static"
-            : parseInt(qrisData.method.value) == 12
-            ? "Dynamic"
-            : parseInt(qrisData.method.value)
-          : ""}
-      </span>
-      <div className="font-semibold border-b border-gray-700 py-1">
-        Merchant Information
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.merchantName
-                ? qrisData.merchantName.tags +
-                  zPad(qrisData.merchantName.value.length)
-                : "5900"}
-            </span>
-            Name
-          </div>
-          <input
-            disabled
-            type="text"
-            defaultValue={
-              qrisData.merchantName ? qrisData.merchantName.value : ""
-            }
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.categoryMerchant
-                ? qrisData.categoryMerchant.tags +
-                  zPad(qrisData.categoryMerchant.value.length)
-                : "5200"}
-            </span>
-            Category
-          </div>
-          <input
-            disabled
-            type="text"
-            defaultValue={
-              qrisData.categoryMerchant
-                ? getCategoryMerchant(qrisData.categoryMerchant.value)
-                : ""
-            }
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.merchantCity
-                ? qrisData.merchantCity.tags +
-                  zPad(qrisData.merchantCity.value.length)
-                : "6000"}
-            </span>
-            City
-          </div>
-          <input
-            disabled
-            type="text"
-            defaultValue={
-              qrisData.merchantCity ? qrisData.merchantCity.value : ""
-            }
-          />
-        </div>
 
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.postalCode
-                ? qrisData.postalCode.tags +
-                  zPad(qrisData.postalCode.value.length)
-                : "6100"}
-            </span>
-            Postal
-          </div>
-          <input
-            disabled
-            type="text"
-            defaultValue={qrisData.postalCode ? qrisData.postalCode.value : ""}
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.countryCode
-                ? qrisData.countryCode.tags +
-                  zPad(qrisData.countryCode.value.length)
-                : "5802"}
-            </span>
-            Country
-          </div>
-          <input
-            disabled
-            type="text"
-            defaultValue={
-              qrisData.countryCode.value
-                ? `${getCountryName(qrisData.countryCode.value)}`
-                : ""
-            }
-          />
-        </div>
-      </div>
-      <div className="font-semibold border-b border-gray-700 py-1">
-        Transaction Information
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5 ">
-              {qrisData.currency
-                ? qrisData.currency.tags + zPad(qrisData.currency.value.length)
-                : "5802"}
-            </span>
-            Currency
-          </div>
-          <input
-            disabled
-            type="text"
-            className="text-xs h-full"
-            defaultValue={
-              qrisData.currency.value
-                ? `(${
-                    getCountryCurrency(qrisData.currency.value).symbolPendek
-                  }) ${
-                    getCountryCurrency(qrisData.currency.value).symbolPanjang
-                  } - ${getCountryCurrency(qrisData.currency.value).nama}`
-                : ""
-            }
-          />
-        </div>
-        <div
-          className={`flex flex-col gap-1 ${
-            qrisData.method && qrisData.method.value == "11" ? "hidden" : ""
-          }`}
-        >
-          <div className="flex flex-row items-center gap-1">
-            <span className="rounded text-xs bg-slate-700 p-0.5">
-              {qrisData.method && qrisData.method.value != "11"
-                ? `54${zPad(qrisData.transactionAmount.value.length)}`
-                : ""}
-            </span>
-            Amount
-          </div>
-          <input
-            disabled
-            type="text"
-            value={
-              qrisData.transactionAmount
-                ? `${
-                    getCountryCurrency(qrisData.currency.value).symbolPendek
-                  } ${qrisData.transactionAmount.value}`
-                : ""
-            }
-          />
-        </div>
-        {qrisData.tipOrConvenienceIndicator ? (
-          <div
-            className={`flex flex-col gap-1 ${
-              parseInt(qrisData.tipOrConvenienceIndicator.value) <= 3 ||
-              parseInt(qrisData.tipOrConvenienceIndicator.value) >= 1
-                ? "hidden"
-                : ""
-            }`}
-          >
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {parseInt(qrisData.tipOrConvenienceIndicator.value) >= 1 ||
-                parseInt(qrisData.tipOrConvenienceIndicator.value) <= 3
-                  ? `55${qrisData.tipOrConvenienceIndicator.value}`
-                  : ""}
-              </span>
-              Tax System
-            </div>
-            <input
-              disabled
-              type="text"
-              value={
-                parseInt(qrisData.tipOrConvenienceIndicator.value) >= 1 ||
-                parseInt(qrisData.tipOrConvenienceIndicator.value) <= 3
-                  ? indicatorMeaning[qrisData.tipOrConvenienceIndicator.value]
-                  : "???"
-              }
+      <div>
+        <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+          Merchant Information
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {qrisData.merchantName && (
+            <DataField
+              label="Name"
+              tag={qrisData.merchantName.tags + zPad(qrisData.merchantName.value.length)}
+              value={qrisData.merchantName.value}
             />
+          )}
+          {qrisData.categoryMerchant && (
+            <DataField
+              label="Category"
+              tag={qrisData.categoryMerchant.tags + zPad(qrisData.categoryMerchant.value.length)}
+              value={getMerchantCategoryName(qrisData.categoryMerchant.value, merchantcategorycode)}
+            />
+          )}
+          {qrisData.merchantCity && (
+            <DataField
+              label="City"
+              tag={qrisData.merchantCity.tags + zPad(qrisData.merchantCity.value.length)}
+              value={qrisData.merchantCity.value}
+            />
+          )}
+          {qrisData.postalCode && (
+            <DataField
+              label="Postal"
+              tag={qrisData.postalCode.tags + zPad(qrisData.postalCode.value.length)}
+              value={qrisData.postalCode.value}
+            />
+          )}
+          {qrisData.countryCode && (
+            <DataField
+              label="Country"
+              tag={qrisData.countryCode.tags + zPad(qrisData.countryCode.value.length)}
+              value={getCountryName(qrisData.countryCode.value)}
+            />
+          )}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+          Transaction Information
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {qrisData.currency && currencyInfo && (
+            <DataField
+              label="Currency"
+              tag={qrisData.currency.tags + zPad(qrisData.currency.value.length)}
+              value={`(${currencyInfo.symbol}) ${currencyInfo.code} - ${currencyInfo.name}`}
+            />
+          )}
+          {qrisData.transactionAmount && isDynamic && (
+            <DataField
+              label="Amount"
+              tag={`54${zPad(qrisData.transactionAmount.value.length)}`}
+              value={qrisData.transactionAmount.value}
+              suffix={currencyInfo ? ` ${currencyInfo.symbol}` : ""}
+            />
+          )}
+          {qrisData.tipOrConvenienceIndicator && (
+            <DataField
+              label="Tip Indicator"
+              tag={`55${zPad(qrisData.tipOrConvenienceIndicator.value.length)}`}
+              value={TIP_INDICATOR_MEANING[qrisData.tipOrConvenienceIndicator.value] ?? "—"}
+            />
+          )}
+          {qrisData.tipOrConvenienceIndicator?.value === "02" && qrisData.fixedFee && (
+            <DataField
+              label="Fixed Fee"
+              tag={`56${zPad(qrisData.fixedFee.value.length)}`}
+              value={qrisData.fixedFee.value}
+              suffix={currencyInfo ? ` ${currencyInfo.symbol}` : ""}
+            />
+          )}
+          {qrisData.tipOrConvenienceIndicator?.value === "03" && qrisData.percentFee && (
+            <DataField
+              label="Percent Fee"
+              tag={`57${zPad(qrisData.percentFee.value.length)}`}
+              value={`${qrisData.percentFee.value}%`}
+            />
+          )}
+        </div>
+      </div>
+
+      {qrisData.additional && Object.keys(qrisData.additional).length > 0 && (
+        <div>
+          <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+            Additional Data
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {Object.entries(qrisData.additional).map(([key, field]) => {
+              if (key === "lengthData" || key === "invalid") return null;
+              return (
+                <DataField
+                  key={key}
+                  label={key}
+                  tag={field.tags + zPad(field.value.length)}
+                  value={field.value}
+                />
+              );
+            })}
           </div>
-        ) : (
-          ""
-        )}
-        {qrisData.tipOrConvenienceIndicator ? (
-          <div
-            className={`flex flex-col gap-1 ${
-              qrisData.tipOrConvenienceIndicator.value < 2 ||
-              qrisData.tipOrConvenienceIndicator.value > 3
-                ? "hidden"
-                : ""
-            }`}
-          >
-            {qrisData.tipOrConvenienceIndicator.value == "02" && (
-              <div className="flex flex-row items-center gap-1">
-                <span className="rounded text-xs bg-slate-700 p-0.5">
-                  {qrisData.tipOrConvenienceIndicator.value == "02"
-                    ? `56${zPad(qrisData.fixedFee.value.length)}`
-                    : `57${zPad(qrisData.percentFee.value.length)}`}
-                </span>
-                {qrisData.tipOrConvenienceIndicator.value == "02"
-                  ? "Fixed Tax"
-                  : "Percent Tax"}
+        </div>
+      )}
+
+      {qrisData.merchantAccount && (
+        <div>
+          <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+            Merchant Account
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {Object.entries(qrisData.merchantAccount).map(([tag, account]) => (
+              <div key={tag} className="flex flex-col gap-1">
+                <span className="text-xs text-slate-400">Tag {tag}</span>
+                <div className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-xs text-slate-400 font-mono break-all">
+                  {JSON.stringify(account, null, 0).slice(0, 100)}
+                </div>
               </div>
-            )}
-
-            <input
-              disabled
-              type="text"
-              value={
-                qrisData.tipOrConvenienceIndicator.value == "02"
-                  ? `${
-                      getCountryCurrency(qrisData.currency.value).symbolPendek
-                    } ${qrisData.fixedFee.value}`
-                  : qrisData.percentFee?.value
-                  ? `${qrisData.percentFee.value}% (${
-                      getCountryCurrency(qrisData.currency.value).symbolPendek
-                    } ${
-                      (qrisData.percentFee.value *
-                        qrisData.transactionAmount.value) /
-                      100
-                    })`
-                  : ""
-              }
-            />
+            ))}
           </div>
-        ) : (
-          ""
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
