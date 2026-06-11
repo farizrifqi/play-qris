@@ -17,9 +17,8 @@ function getFieldTag(field) {
 function rebuildChecksum(qrisStr, checksumValue) {
   const withoutChecksum = qrisStr.replace(checksumValue, "");
   const crc = crc16ccitt(withoutChecksum);
-  const hex = crc.toString(16);
-  const paddedHex = hex.length === 3 ? `0${hex}` : hex;
-  return `${withoutChecksum}${paddedHex.toUpperCase()}`;
+  const paddedHex = crc.toString(16).padStart(4, "0").toUpperCase();
+  return `${withoutChecksum}${paddedHex}`;
 }
 
 export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
