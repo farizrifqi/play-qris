@@ -120,11 +120,13 @@ export default function Home() {
     setShowResult(false);
   };
 
+  const ldJson = JSON.stringify(structuredData).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: ldJson }}
       />
       <main className="flex min-h-screen flex-col items-center justify-center bg-slate-950 text-white p-4">
       <div className="w-full max-w-4xl">
