@@ -1,327 +1,236 @@
 "use client";
-import { dynamicSort, zPad } from "@/lib/others";
+import { zPad } from "@/lib/others";
 import countries from "../lib/countries.json";
 import { useState } from "react";
-import merchantcategorycode from "../lib/mcc.json";
 import crc16ccitt from "@/lib/crc16ccitt";
 
-countries.sort(dynamicSort("common"));
+const TIP_INDICATOR_MEANING = {
+  "01": "Customer Input",
+  "02": "Fixed",
+  "03": "In Percent",
+};
+
+function getFieldTag(field) {
+  return field.tags + zPad(field.value.length);
+}
+
+function rebuildChecksum(qrisStr, checksumValue) {
+  const withoutChecksum = qrisStr.replace(checksumValue, "");
+  const crc = crc16ccitt(withoutChecksum);
+  const paddedHex = crc.toString(16).padStart(4, "0").toUpperCase();
+  return `${withoutChecksum}${paddedHex}`;
+}
 
 export default function EditData({ newQrisData, newQris, pushNewQrisData }) {
   const [tempData, setTempData] = useState(newQrisData);
 
-  const getFullValue = (tags, value) => {
-    return `${tags}${zPad(value.length)}${value}`;
-  };
-  const indicatorMeaning = {
-    "01": "Customer Input",
-    "02": "Fixed",
-    "03": "In Percent",
-  };
-  const changeData = (e, key1) => {
-    if (!newQrisData[key1]) {
-      if (key1 == "transactionAmount") {
-        if (e.target.value != "" && e.target.value != "0") {
-          //* Add key "transactionAmount" to ObjectData
+  const changeData = (e, key) => {
+    const newValue = e.target.value;
 
-          let temp = newQrisData;
-          temp[key1] = {
-            tags: "54",
-            value: e.target.value,
-          };
-
-          // * Add str to Qris Data
-          const countryData = `5802${newQrisData["countryCode"].value}`;
-
-          newQris = newQris.replace(
-            countryData,
-            `54${zPad(e.target.value.length)}${e.target.value}${countryData}`
-          );
-          // * Change Method to dynamic
-          temp["method"] = {
-            tags: "01",
-            value: "12",
-          };
-          // * Change method on QRIS str
-          newQris = newQris.replace("010211", `010212`);
-
-          // * Save QRIS ObjectData
-          newQrisData[key1] = temp[key1];
-        }
-      } else {
-        let temp = newQrisData;
-        temp[key1] = {
-          tags: "54",
-          value: 0,
-        };
-        const countryData = `5802${newQrisData["countryCode"].value}`;
-        newQris = newQris.replace(
+    // Handle adding transactionAmount when it doesn't exist yet
+    if (!newQrisData[key] && key === "transactionAmount") {
+      if (newValue !== "" && newValue !== "0") {
+        const countryData = `5802${newQrisData.countryCode.value}`;
+        const updatedQris = newQris.replace(
           countryData,
-          `54${zPad(e.target.value.length)}${e.target.value}${countryData}`
+          `54${zPad(newValue.length)}${newValue}${countryData}`
         );
-        temp["method"] = {
-          tags: "01",
-          value: "11",
+        // Build new object instead of mutating prop
+        const updatedData = {
+          ...newQrisData,
+          [key]: { tags: "54", value: newValue },
+          method: { tags: "01", value: "12" },
         };
-        // * Change method on QRIS str
-        newQris = newQris.replace("010211", `010211`);
-
-        // * Save QRIS ObjectData
-        newQrisData[key1] = temp[key1];
+        setTempData(updatedData);
+        pushNewQrisData(updatedQris.replace("010211", "010212"));
       }
+      return;
     }
-    let tempChangeQris = newQris;
-    let tempProp = { ...newQrisData[key1] };
-    let tempChangeQrisData = { ...newQrisData };
-    tempProp.value = e.target.value;
-    tempChangeQrisData[key1] = tempProp;
-    const oldVal = getFullValue(
-      newQrisData[key1].tags,
-      newQrisData[key1].value
-    );
-    const newVal = getFullValue(tempChangeQrisData[key1].tags, e.target.value);
-    tempChangeQris = tempChangeQris.replace(oldVal, newVal);
-    setTempData(tempChangeQrisData);
 
-    //! Re-checksum
+    // Standard field update — build immutable copy
+    const updatedData = {
+      ...newQrisData,
+      [key]: { ...newQrisData[key], value: newValue },
+    };
+    const oldFullValue = getFieldTag(newQrisData[key]) + newQrisData[key].value;
+    const newFullValue = getFieldTag(updatedData[key]) + newValue;
+    let updatedQris = newQris.replace(oldFullValue, newFullValue);
 
-    tempChangeQris = tempChangeQris.replace(
-      tempChangeQrisData.checksum.value,
-      ""
-    );
-    const newChecksum =
-      crc16ccitt(tempChangeQris).length == 3
-        ? `0${crc16ccitt(tempChangeQris)}`.toString(16)
-        : crc16ccitt(tempChangeQris).toString(16);
-    tempChangeQris = `${tempChangeQris}${newChecksum.toUpperCase()}`;
-    pushNewQrisData(tempChangeQris);
+    // Rebuild CRC checksum
+    updatedQris = rebuildChecksum(updatedQris, updatedData.checksum.value);
+
+    setTempData(updatedData);
+    pushNewQrisData(updatedQris);
   };
+
+  const isStatic = newQrisData.method?.value === "11";
+  const isDynamic = newQrisData.method?.value === "12";
+
+  const currencyOptions = countries
+    .filter(c => Object.keys(c.currencies).length > 0)
+    .map(c => {
+      const code = Object.keys(c.currencies)[0];
+      return {
+        id: c.ccn3,
+        symbol: c.currencies[code].symbol,
+        code,
+        name: c.currencies[code].name,
+      };
+    });
 
   return (
-    <div className="flex flex-col gap-2 p-5 bg-slate-900 rounded-lg text-sm">
-      <div className="text-lg font-bold border-b border-gray-700 py-1">
-        Editable Data
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-3 text-sm">
+        <span className="text-slate-400">
+          Type: <span className={`font-medium ${isDynamic ? "text-emerald-400" : "text-blue-400"}`}>
+            {isStatic ? "Static" : isDynamic ? "Dynamic" : "—"}
+          </span>
+        </span>
       </div>
-      <span>
-        Type:{" "}
-        {newQrisData.method
-          ? parseInt(newQrisData.method.value) == 11
-            ? "Static"
-            : parseInt(newQrisData.method.value) == 12
-            ? "Dynamic"
-            : parseInt(newQrisData.method.value)
-          : ""}
-      </span>
-      <div className="font-semibold border-b border-gray-700 py-1">
-        Merchant Information
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        {newQrisData.merchantName ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {newQrisData.merchantName.tags +
-                  zPad(newQrisData.merchantName.value.length)}
-              </span>
-              Name
-            </div>
-            <input
-              type="text"
-              onChange={(e) => changeData(e, "merchantName")}
-              value={newQrisData.merchantName.value}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        {/* 
-        // ! BUG
-        {tempData.categoryMerchant ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {newQrisData.categoryMerchant.tags +
-                  zPad(newQrisData.categoryMerchant.value.length)}
-              </span>
-              Category
-            </div>
-            <select onChange={(e) => changeData(e, "categoryMerchant")}>
-              {merchantcategorycode.map((merchCode, i) => {
-                return (
-                  <option key={i} value={merchCode.id}>
-                    {merchCode.description}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-        ) : (
-          ""
-        )} */}
 
-        {tempData.merchantCity ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {newQrisData.merchantCity.tags +
-                  zPad(newQrisData.merchantCity.value.length)}
-              </span>
-              City
+      <div>
+        <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+          Merchant Information
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {newQrisData.merchantName && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
+                  {getFieldTag(newQrisData.merchantName)}
+                </span>
+                Name
+              </label>
+              <input
+                type="text"
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "merchantName")}
+                value={newQrisData.merchantName.value}
+              />
             </div>
-            <input
-              type="text"
-              onChange={(e) => changeData(e, "merchantCity")}
-              value={newQrisData.merchantCity.value}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        {tempData.postalCode ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {newQrisData.postalCode.tags +
-                  zPad(newQrisData.postalCode.value.length)}
-              </span>
-              Postal
+          )}
+
+          {newQrisData.merchantCity && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
+                  {getFieldTag(newQrisData.merchantCity)}
+                </span>
+                City
+              </label>
+              <input
+                type="text"
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "merchantCity")}
+                value={newQrisData.merchantCity.value}
+              />
             </div>
-            <input
-              type="text"
-              onChange={(e) => changeData(e, "postalCode")}
-              value={newQrisData.postalCode.value}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        {tempData.countryCode ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">5802</span>
-              Country
+          )}
+
+          {newQrisData.postalCode && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
+                  {getFieldTag(newQrisData.postalCode)}
+                </span>
+                Postal
+              </label>
+              <input
+                type="text"
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "postalCode")}
+                value={newQrisData.postalCode.value}
+              />
             </div>
-            <select
-              onChange={(e) => changeData(e, "countryCode")}
-              value={newQrisData.countryCode.value}
-            >
-              {countries.map((c, i) => (
-                <option key={i} value={c.cca2}>
-                  {c.name.common}
-                </option>
-              ))}
-            </select>
-          </div>
-        ) : (
-          ""
-        )}
+          )}
+
+          {newQrisData.countryCode && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">5802</span>
+                Country
+              </label>
+              <select
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "countryCode")}
+                value={newQrisData.countryCode.value}
+              >
+                {countries.map((c) => (
+                  <option key={c.cca2} value={c.cca2}>
+                    {c.name.common}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
       </div>
-      <div className="font-semibold border-b border-gray-700 py-1">
-        Transaction Information
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        {tempData.currency ? (
-          <div className="flex flex-col gap-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">5802</span>
-              Country
+
+      <div>
+        <h3 className="text-sm font-semibold text-slate-300 border-b border-slate-700 pb-1 mb-3">
+          Transaction Information
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {newQrisData.currency && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
+                  {getFieldTag(newQrisData.currency)}
+                </span>
+                Currency
+              </label>
+              <select
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "currency")}
+                value={newQrisData.currency.value}
+              >
+                {currencyOptions.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    ({c.symbol}) {c.code} - {c.name}
+                  </option>
+                ))}
+              </select>
             </div>
-            <select
-              className="text-xs"
-              onChange={(e) => changeData(e, "currency")}
-              value={newQrisData.currency.value}
-            >
-              {countries.map((c, i) => (
-                <option key={i} value={c.ccn3}>
-                  ({c.currencies[Object.keys(c.currencies)[0]].symbol}){" "}
-                  {Object.keys(c.currencies)[0]} -{" "}
-                  {c.currencies[Object.keys(c.currencies)[0]].name}
-                </option>
-              ))}
-            </select>
-          </div>
-        ) : (
-          ""
-        )}
-        {true ? (
-          <div className={`flex flex-col gap-1`}>
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
+          )}
+
+          <div className="flex flex-col gap-1">
+            <label className="flex items-center gap-1 text-xs text-slate-400">
+              <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
                 54
                 {newQrisData.transactionAmount
                   ? zPad(newQrisData.transactionAmount.value.length)
                   : "00"}
               </span>
               Amount
-            </div>
+            </label>
             <input
-              onChange={(e) => changeData(e, "transactionAmount")}
               type="text"
-              value={
-                newQrisData.transactionAmount
-                  ? newQrisData.transactionAmount.value
-                  : 0
-              }
+              className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => changeData(e, "transactionAmount")}
+              value={newQrisData.transactionAmount?.value ?? "0"}
             />
           </div>
-        ) : (
-          ""
-        )}
 
-        {newQrisData.tipOrConvenienceIndicator &&
-        (newQrisData.tipOrConvenienceIndicator.value >= 1) |
-          (newQrisData.tipOrConvenienceIndicator.value <= 3) ? (
-          <div className={`flex flex-col gap-1`}>
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                55{zPad(newQrisData.tipOrConvenienceIndicator.value.length)}
-              </span>
-              Tax System (TO-DO)
+          {newQrisData.tipOrConvenienceIndicator && (
+            <div className="flex flex-col gap-1">
+              <label className="flex items-center gap-1 text-xs text-slate-400">
+                <span className="rounded bg-slate-700 px-1 py-0.5 font-mono">
+                  55{zPad(newQrisData.tipOrConvenienceIndicator.value.length)}
+                </span>
+                Tip Indicator
+              </label>
+              <select
+                className="bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(e) => changeData(e, "tipOrConvenienceIndicator")}
+                value={newQrisData.tipOrConvenienceIndicator.value}
+              >
+                {Object.entries(TIP_INDICATOR_MEANING).map(([key, label]) => (
+                  <option key={key} value={key}>{label}</option>
+                ))}
+              </select>
             </div>
-            <select
-              className="text-xs"
-              onChange={(e) => changeData(e, "tipOrConvenienceIndicator")}
-              value={newQrisData.tipOrConvenienceIndicator.value}
-              disabled
-            >
-              {Object.keys(indicatorMeaning).map((key) => (
-                <option key={key} value={key}>
-                  {indicatorMeaning[key]}
-                </option>
-              ))}
-            </select>
-          </div>
-        ) : (
-          ""
-        )}
-        {/* {(newQrisData.tipOrConvenienceIndicator &&
-          // todo
-          newQrisData.tipOrConvenienceIndicator.value >= 2) ||
-        newQrisData.tipOrConvenienceIndicator.value <= 3 ? (
-          <div className={`flex flex-col gap-1`}>
-            <div className="flex flex-row items-center gap-1">
-              <span className="rounded text-xs bg-slate-700 p-0.5">
-                {newQrisData.tipOrConvenienceIndicator.value == "02"
-                  ? `56${zPad(newQrisData.fixedFee.value.length)}`
-                  : `57${zPad(newQrisData.percentFee.value.length)}`}
-              </span>
-              Tax System
-            </div>
-            <select
-              className="text-xs"
-              onChange={(e) => changeData(e, "tipOrConvenienceIndicator")}
-              value={newQrisData.tipOrConvenienceIndicator.value}
-            >
-              {Object.keys(indicatorMeaning).map((key) => (
-                <option key={key} value={key}>
-                  {indicatorMeaning[key]}
-                </option>
-              ))}
-            </select>
-          </div>
-        ) : (
-          ""
-        )} */}
+          )}
+        </div>
       </div>
     </div>
   );
